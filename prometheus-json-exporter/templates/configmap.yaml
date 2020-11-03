@@ -1,0 +1,11 @@
+{{- $configMap := toYaml .Values.config -}}
+apiVersion: v1
+data:
+  config.yml: |
+{{ tpl $configMap . | indent 4 }}
+kind: ConfigMap
+metadata:
+  name: {{ include "prometheus-json-exporter.fullname" . }}
+  labels:
+    {{- include "prometheus-json-exporter.labels" . | nindent 4 }}
+
