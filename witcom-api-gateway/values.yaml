@@ -80,6 +80,13 @@ ingressPublic:
   #    hosts:
   #	 - chart-example.local
 
+extraEnvs: []
+#extraEnvs:
+# - name: FOO
+#   valueFrom:
+#     secretKeyRef:
+#       key: FOO
+#       name: secret-resource
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
