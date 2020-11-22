@@ -4,6 +4,7 @@ metadata:
   name: {{ include "witcom-id-generator.fullname" . }}
   labels:
     {{- include "witcom-id-generator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: generator
 spec:
 {{- if not .Values.generator.autoscaling.enabled }}
   replicas: {{ .Values.generator.replicaCount }}

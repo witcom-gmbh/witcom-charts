@@ -48,7 +48,31 @@ Selector labels
 {{- define "witcom-id-generator.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "witcom-id-generator.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
+app.kubernetes.io/component: generator
 {{- end }}
+
+{{/*
+Common labels
+*/}}
+{{- define "witcom-id-generator.webapp.labels" -}}
+helm.sh/chart: {{ include "witcom-id-generator.chart" . }}
+{{ include "witcom-id-generator.webapp.selectorLabels" . }}
+{{- if .Chart.AppVersion }}
+app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+{{- end }}
+app.kubernetes.io/managed-by: {{ .Release.Service }}
+{{- end }}
+
+
+{{/*
+Selector labels webapp
+*/}}
+{{- define "witcom-id-generator.webapp.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "witcom-id-generator.name" . }}
+app.kubernetes.io/instance: {{ .Release.Name }}
+app.kubernetes.io/component: webapp
+{{- end }}
+
 
 {{/*
 Create the name of the service account to use
