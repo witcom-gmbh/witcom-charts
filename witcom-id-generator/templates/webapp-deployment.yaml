@@ -27,8 +27,25 @@ spec:
       serviceAccountName: {{ include "witcom-id-generator.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.webapp.podSecurityContext | nindent 8 }}
+      initContainers:
+        - name: init-config
+          image: pub-registry.dev.witcom.services/witcom/env2json:latest
+          env:
+            - name: OUTPUT
+              value: /config/appconfig.json
+            - name: APP_KEYCLOAK_URL
+              value: {{ .Values.global.keycloak.serverUrl }}
+            - name: APP_KEYCLOAK_REALM
+              value: {{ .Values.global.keycloak.realm }}
+            - name: APP_KEYCLOAK_CLIENT_ID
+              value: {{ .Values.webapp.keycloak.clientId }}
+            - name: APP_API_URL
+              value: {{ .Values.webapp.apiUrl }}
+          volumeMounts:
+          - name: config
+            mountPath: "/config"
       containers:
-        - name: {{ include "witcom-id-generator.fullname" . }}-webapp
+        - name: generator-webapp
           securityContext:
             {{- toYaml .Values.webapp.securityContext | nindent 12 }}
           image: "{{ .Values.webapp.image.repository }}:{{ .Values.webapp.image.tag }}"
@@ -56,11 +73,9 @@ spec:
           resources:
             {{- toYaml .Values.webapp.resources | nindent 12 }}
           volumeMounts:
-            {{- if .Values.webapp.config }}
             - name: config
               mountPath: "/opt/app-root/src/assets/configdata"
               readOnly: true
-            {{- end }} 
       {{- with .Values.webapp.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -74,8 +89,5 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       volumes:
-        {{- if .Values.webapp.config }}
         - name: config
-          configMap:
-            name: {{ include "witcom-id-generator.fullname" $ }}-webapp
-        {{- end }}
+          emptyDir: {}

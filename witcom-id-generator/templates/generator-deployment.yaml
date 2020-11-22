@@ -29,8 +29,8 @@ spec:
       securityContext:
         {{- toYaml .Values.generator.podSecurityContext | nindent 8 }}
       containers:
-        {{- if .Values.generator.config }}
-        - name: {{ include "witcom-id-generator.fullname" . }}-reload
+        {{- if and .Values.generator.externalConfig.enabled .Values.generator.externalConfig.configmap }}
+        - name: generator-reload
           image: "{{ .Values.configmapReload.generator.image.repository }}:{{ .Values.configmapReload.generator.image.tag }}"
           imagePullPolicy: "{{ .Values.configmapReload.generator.image.pullPolicy }}"
           args:
@@ -41,7 +41,7 @@ spec:
               mountPath: /etc/config-external
               readOnly: true
         {{- end }}
-        - name: {{ include "witcom-id-generator.fullname" . }}
+        - name: generator
           securityContext:
             {{- toYaml .Values.generator.securityContext | nindent 12 }}
           image: "{{ .Values.generator.image.repository }}:{{ .Values.generator.image.tag }}"
@@ -50,15 +50,15 @@ spec:
             - name: KEYCLOAK_SECRET
               valueFrom:
                 secretKeyRef:
-                  name: {{ .Values.global.keycloak.secretName | default (printf "%s-keycloak" (include "witcom-id-generator.fullname" .)) }}
-                  key: {{ .Values.global.keycloak.secretKey }}
+                  name: {{ .Values.generator.keycloak.secretName | default (printf "%s-keycloak" (include "witcom-id-generator.fullname" .)) }}
+                  key: {{ .Values.generator.keycloak.secretKey }}
             - name: KEYCLOAK_SERVER_URL
               value: {{ .Values.global.keycloak.serverUrl }}
             - name: KEYCLOAK_REALM
               value: {{ .Values.global.keycloak.realm }}
             - name: KEYCLOAK_RESOURCE_ID
-              value: {{ .Values.global.keycloak.resourceId }}
-            {{- if .Values.generator.config }}
+              value: {{ .Values.generator.keycloak.clientId }}
+            {{- if and .Values.generator.externalConfig.enabled .Values.generator.externalConfig.configmap }}
             - name: CONFIGFILE
               value: /config-external/generatorconfig.json
             {{- end }} 
@@ -95,7 +95,7 @@ spec:
           resources:
             {{- toYaml .Values.generator.resources | nindent 12 }}
           volumeMounts:
-            {{- if .Values.generator.config }}
+            {{- if and .Values.generator.externalConfig.enabled .Values.generator.externalConfig.configmap }}
             - name: config
               mountPath: "/config-external"
               readOnly: true
@@ -113,8 +113,8 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       volumes:
-        {{- if .Values.generator.config }}
+        {{- if and .Values.generator.externalConfig.enabled .Values.generator.externalConfig.configmap }}
         - name: config
           configMap:
-            name: {{ include "witcom-id-generator.fullname" $ }}
+            name: {{ .Values.generator.externalConfig.configmap }}
         {{- end }}
