@@ -1,0 +1,120 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "witcom-id-generator.fullname" . }}
+  labels:
+    {{- include "witcom-id-generator.labels" . | nindent 4 }}
+    app.kubernetes.io/component: generator
+spec:
+{{- if not .Values.generator.autoscaling.enabled }}
+  replicas: {{ .Values.generator.replicaCount }}
+{{- end }}
+  selector:
+    matchLabels:
+      {{- include "witcom-id-generator.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+    {{- with .Values.generator.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      labels:
+        {{- include "witcom-id-generator.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.generator.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "witcom-id-generator.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.generator.podSecurityContext | nindent 8 }}
+      containers:
+        {{- if and .Values.generator.externalConfig.enabled .Values.generator.externalConfig.configmap }}
+        - name: generator-reload
+          image: "{{ .Values.configmapReload.generator.image.repository }}:{{ .Values.configmapReload.generator.image.tag }}"
+          imagePullPolicy: "{{ .Values.configmapReload.generator.image.pullPolicy }}"
+          args:
+            - -volume-dir=/etc/config-external
+            - -webhook-url=http://127.0.0.1:3000/api/v1/operations/reload          
+          volumeMounts:
+            - name: config
+              mountPath: /etc/config-external
+              readOnly: true
+        {{- end }}
+        - name: generator
+          securityContext:
+            {{- toYaml .Values.generator.securityContext | nindent 12 }}
+          image: "{{ .Values.generator.image.repository }}:{{ .Values.generator.image.tag }}"
+          imagePullPolicy: {{ .Values.generator.image.pullPolicy }}
+          env:
+            - name: KEYCLOAK_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.generator.keycloak.secretName | default (printf "%s-keycloak" (include "witcom-id-generator.fullname" .)) }}
+                  key: {{ .Values.generator.keycloak.secretKey }}
+            - name: KEYCLOAK_SERVER_URL
+              value: {{ .Values.global.keycloak.serverUrl }}
+            - name: KEYCLOAK_REALM
+              value: {{ .Values.global.keycloak.realm }}
+            - name: KEYCLOAK_RESOURCE_ID
+              value: {{ .Values.generator.keycloak.clientId }}
+            {{- if and .Values.generator.externalConfig.enabled .Values.generator.externalConfig.configmap }}
+            - name: CONFIGFILE
+              value: /config-external/generatorconfig.json
+            {{- end }} 
+            {{- if .Values.redis.enabled }}
+            - name: REDIS_HOST
+              value: {{ include "witcom-id-generator.redis.fullname" . }}-master
+            - name: REDIS_PORT
+              value: "6379"
+            - name: REDIS_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "witcom-id-generator.redis.fullname" . }}
+                  key: redis-password
+            {{- end }}
+            {{- with .Values.extraEnv }}
+            {{- tpl . $ | nindent 12 }}
+            {{- end }}
+          envFrom:
+            {{- with .Values.extraEnvFrom }}
+            {{- tpl . $ | nindent 12 }}
+            {{- end }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.generator.service.port }}
+              protocol: TCP
+          {{- with .Values.generator.livenessProbe }}
+          livenessProbe:
+            {{- tpl . $ | nindent 12 }}
+          {{- end }}
+          {{- with .Values.generator.readinessProbe }}
+          readinessProbe:
+            {{- tpl . $ | nindent 12 }}
+          {{- end }}
+          resources:
+            {{- toYaml .Values.generator.resources | nindent 12 }}
+          volumeMounts:
+            {{- if and .Values.generator.externalConfig.enabled .Values.generator.externalConfig.configmap }}
+            - name: config
+              mountPath: "/config-external"
+              readOnly: true
+            {{- end }} 
+      {{- with .Values.generator.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.generator.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.generator.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      volumes:
+        {{- if and .Values.generator.externalConfig.enabled .Values.generator.externalConfig.configmap }}
+        - name: config
+          configMap:
+            name: {{ .Values.generator.externalConfig.configmap }}
+        {{- end }}

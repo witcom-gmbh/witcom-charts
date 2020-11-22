@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "witcom-id-generator.fullname" . }}
+  labels:
+    {{- include "witcom-id-generator.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.generator.service.type }}
+  ports:
+    - port: {{ .Values.generator.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "witcom-id-generator.selectorLabels" . | nindent 4 }}
