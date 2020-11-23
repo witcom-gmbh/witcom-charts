@@ -3,7 +3,7 @@ entries:
   prometheus-json-exporter:
   - apiVersion: v2
     appVersion: latest
-    created: "2020-11-22T22:21:10.41476949+01:00"
+    created: "2020-11-23T10:41:27.367289446+01:00"
     description: A Helm chart for Kubernetes
     digest: 0c44073a5d78447dfa9ef0f3bacd88f02c9ce7a472bc70202f7d0ba17a746ebd
     name: prometheus-json-exporter
@@ -14,7 +14,7 @@ entries:
   witcom-api-gateway:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2020-11-22T22:21:10.416828892+01:00"
+    created: "2020-11-23T10:41:27.36928806+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 57192ab0e96907122df1c6d899d1314ef72ea5e562a13ed7fec03be4ddedcbbc
     name: witcom-api-gateway
@@ -24,7 +24,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2020-11-22T22:21:10.41570138+01:00"
+    created: "2020-11-23T10:41:27.368369948+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 6c414046e32504c671b184e1306b809b41b37ffd46d82f4cf4e4f51d4245e3d5
     name: witcom-api-gateway
@@ -34,8 +34,23 @@ entries:
     version: 0.1.0
   witcom-id-generator:
   - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2020-11-23T10:41:27.384424498+01:00"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.1
+    description: Helm Chart for WiTCOM ID generator service & web-application
+    digest: 4923659939cf854c84880172b4918d76c7d8f1f28d0bc8c3527d7885bf0eb2cc
+    name: witcom-id-generator
+    type: application
+    urls:
+    - https://witcom-gmbh.github.io/witcom-charts/witcom-id-generator-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v2
     appVersion: 1.0.0
-    created: "2020-11-22T22:21:10.427271253+01:00"
+    created: "2020-11-23T10:41:27.376318631+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -48,4 +63,4 @@ entries:
     urls:
     - https://witcom-gmbh.github.io/witcom-charts/witcom-id-generator-0.3.0.tgz
     version: 0.3.0
-generated: "2020-11-22T22:21:10.413396845+01:00"
+generated: "2020-11-23T10:41:27.366032023+01:00"

@@ -23,7 +23,7 @@ generator:
     repository: pub-registry.dev.witcom.services/witcom/id-generator
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
-    tag: "1.2.2"
+    tag: "1.2.3"
 
   imagePullSecrets: []
   nameOverride: ""
@@ -55,16 +55,16 @@ generator:
 
   livenessProbe: |
     httpGet:
-      path: /-/health
+      path: /-/live
       port: http
-    initialDelaySeconds: 120
+    initialDelaySeconds: 60
     timeoutSeconds: 5
 
   readinessProbe: |
     httpGet:
-      path: /-/health
+      path: /-/ready
       port: http
-    initialDelaySeconds: 30
+    initialDelaySeconds: 10
     timeoutSeconds: 1
 
   service:
