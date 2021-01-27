@@ -10,8 +10,6 @@ metadata:
     app.kubernetes.io/component: {{ include "witcom-zim-component.rmdbsvc" . }}
 spec:
   replicas: {{ .Values.rmdbsvc.replicaCount }}
-  updateStrategy:
-    type: RollingUpdate
   selector:
     matchLabels:
       app.kubernetes.io/name: {{ include "witcom-zim.name" . }}-{{ include "witcom-zim-component.rmdbsvc" . }}
