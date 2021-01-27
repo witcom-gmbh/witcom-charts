@@ -3,7 +3,7 @@ entries:
   prometheus-json-exporter:
   - apiVersion: v2
     appVersion: latest
-    created: "2021-01-27T12:49:25.594094099+01:00"
+    created: "2021-01-27T13:31:44.896996005+01:00"
     description: A Helm chart for Kubernetes
     digest: 0c44073a5d78447dfa9ef0f3bacd88f02c9ce7a472bc70202f7d0ba17a746ebd
     name: prometheus-json-exporter
@@ -14,7 +14,7 @@ entries:
   witcom-api-gateway:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-01-27T12:49:25.596059794+01:00"
+    created: "2021-01-27T13:31:44.898868179+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 57192ab0e96907122df1c6d899d1314ef72ea5e562a13ed7fec03be4ddedcbbc
     name: witcom-api-gateway
@@ -24,7 +24,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-01-27T12:49:25.594956417+01:00"
+    created: "2021-01-27T13:31:44.897949012+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 6c414046e32504c671b184e1306b809b41b37ffd46d82f4cf4e4f51d4245e3d5
     name: witcom-api-gateway
@@ -35,7 +35,7 @@ entries:
   witcom-id-generator:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2021-01-27T12:49:25.612048252+01:00"
+    created: "2021-01-27T13:31:44.915197333+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -50,7 +50,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-01-27T12:49:25.604291934+01:00"
+    created: "2021-01-27T13:31:44.907068057+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -66,7 +66,25 @@ entries:
   witcom-zim:
   - apiVersion: v1
     appVersion: 1.0.2
-    created: "2021-01-27T12:49:25.616411002+01:00"
+    created: "2021-01-27T13:31:44.924877842+01:00"
+    dependencies:
+    - alias: mariadbzimuaa
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.5.2
+    - alias: mariadbfrontend
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.5.2
+    description: A Helm chart for WiTCOM-ZIM application
+    digest: 0f70c8bdd7d1273a75381f817f24d692dcc48ff85013c6669e88ffe95984d096
+    name: witcom-zim
+    urls:
+    - https://witcom-gmbh.github.io/witcom-charts/witcom-zim-0.3.4.tgz
+    version: 0.3.4
+  - apiVersion: v1
+    appVersion: 1.0.2
+    created: "2021-01-27T13:31:44.919922981+01:00"
     dependencies:
     - alias: mariadbzimuaa
       name: mariadb
@@ -82,4 +100,4 @@ entries:
     urls:
     - https://witcom-gmbh.github.io/witcom-charts/witcom-zim-0.3.3.tgz
     version: 0.3.3
-generated: "2021-01-27T12:49:25.592887466+01:00"
+generated: "2021-01-27T13:31:44.895856831+01:00"
