@@ -11,7 +11,7 @@ frontend:
   replicaCount: 1
   image:
     name: pub-registry.dev.witcom.services/witcom/zim-frontend
-    tag: 1.0.3
+    tag: 1.0.4
     pullPolicy: IfNotPresent
 
   identity:
@@ -78,7 +78,7 @@ zimuaa:
   replicaCount: 1
   image:
     name: pub-registry.dev.witcom.services/witcom/zim-uaa
-    tag: 0.1.0
+    tag: 0.1.1
     pullPolicy: IfNotPresent
 
   resources: {}
