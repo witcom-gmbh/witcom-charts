@@ -1,0 +1,40 @@
+{{- if .Values.frontend.ingress.private.enabled -}}
+{{- $fullName := include "witcom-zim.fullname" . -}}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ $fullName }}-{{ include "witcom-zim-component.frontend" . }}-private
+  labels:
+    app.kubernetes.io/name: {{ include "witcom-zim.name" . }}
+    helm.sh/chart: {{ include "witcom-zim.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    app.kubernetes.io/component: {{ include "witcom-zim-component.frontend" . }}    
+  {{- with .Values.frontend.ingress.private.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+{{- if .Values.frontend.ingress.private.tls }}
+  tls:
+  {{- range .Values.frontend.ingress.private.tls }}
+    - hosts:
+      {{- range .hosts }}
+        - {{ . | quote }}
+      {{- end }}
+      secretName: {{ .secretName }}
+  {{- end }}
+{{- end }}
+  rules:
+  {{- range .Values.frontend.ingress.private.hosts }}
+    - host: {{ .host | quote }}
+      http:
+        paths:
+        {{- range .paths }}
+          - path: {{ . }}
+            backend:
+              serviceName: {{ $fullName }}-{{ include "witcom-zim-component.frontend" . }}
+              servicePort: {{ include "witcom-zim-component.frontend" . }}-api
+        {{- end }}
+  {{- end }}
+{{- end }}

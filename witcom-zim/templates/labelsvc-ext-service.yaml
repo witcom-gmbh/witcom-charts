@@ -1,0 +1,21 @@
+{{- if eq .Values.labelsvc.service.type "ExternalName" -}}
+{{- $fullName := include "witcom-zim.fullname" . -}}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ $fullName }}-{{ include "witcom-zim-component.labelsvc" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "witcom-zim.name" . }}
+    helm.sh/chart: {{ include "witcom-zim.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    app.kubernetes.io/component: {{ include "witcom-zim-component.labelsvc" . }}
+spec:
+  type: ExternalName
+  ports:
+    - port: {{ .Values.labelsvc.service.port }}
+      targetPort: {{ .Values.labelsvc.service.port }}
+      protocol: TCP
+      name: {{ include "witcom-zim-component.labelsvc" . }}-api
+  externalName: {{ default "" .Values.labelsvc.service.externalName }}
+{{- end }}
