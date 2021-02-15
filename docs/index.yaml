@@ -1,9 +1,21 @@
 apiVersion: v1
 entries:
+  apicurio-registry-streams:
+  - apiVersion: v2
+    appVersion: 0.0.4
+    created: "2021-02-15T11:25:25.906887904+01:00"
+    description: A Helm chart for deploying APICURIO-Registry with Kafka-Streams-Backend
+      on Kubernetes
+    digest: 9d171bd9026e8cdebbb7f6fba5d7fe7dfea8229eb9fa60633af3434c9abc70af
+    name: apicurio-registry-streams
+    type: application
+    urls:
+    - https://witcom-gmbh.github.io/witcom-charts/apicurio-registry-streams-0.3.2.tgz
+    version: 0.3.2
   opendistro-es:
   - apiVersion: v1
     appVersion: 1.12.0
-    created: "2021-02-12T09:01:37.387859977+01:00"
+    created: "2021-02-15T11:25:25.909401518+01:00"
     description: Open Distro for Elasticsearch
     digest: 838aeb1c2f1e88df2758b011f904747f215033b25cbc0f73a5cdc053f582521b
     kubeVersion: ^1.10.0-0
@@ -21,7 +33,7 @@ entries:
   prometheus-json-exporter:
   - apiVersion: v2
     appVersion: latest
-    created: "2021-02-12T09:01:37.388892895+01:00"
+    created: "2021-02-15T11:25:25.910298269+01:00"
     description: A Helm chart for Kubernetes
     digest: 0c44073a5d78447dfa9ef0f3bacd88f02c9ce7a472bc70202f7d0ba17a746ebd
     name: prometheus-json-exporter
@@ -32,7 +44,7 @@ entries:
   witcom-api-gateway:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-02-12T09:01:37.39095476+01:00"
+    created: "2021-02-15T11:25:25.912183534+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 57192ab0e96907122df1c6d899d1314ef72ea5e562a13ed7fec03be4ddedcbbc
     name: witcom-api-gateway
@@ -42,7 +54,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-02-12T09:01:37.389875511+01:00"
+    created: "2021-02-15T11:25:25.911196407+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 6c414046e32504c671b184e1306b809b41b37ffd46d82f4cf4e4f51d4245e3d5
     name: witcom-api-gateway
@@ -53,7 +65,7 @@ entries:
   witcom-id-generator:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2021-02-12T09:01:37.409192627+01:00"
+    created: "2021-02-15T11:25:25.927264174+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -68,7 +80,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-02-12T09:01:37.400969823+01:00"
+    created: "2021-02-15T11:25:25.920934476+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -84,7 +96,7 @@ entries:
   witcom-zim:
   - apiVersion: v1
     appVersion: 1.0.4
-    created: "2021-02-12T09:01:37.414116886+01:00"
+    created: "2021-02-15T11:25:25.931607673+01:00"
     dependencies:
     - alias: mariadbzimuaa
       name: mariadb
@@ -100,4 +112,4 @@ entries:
     urls:
     - https://witcom-gmbh.github.io/witcom-charts/witcom-zim-0.3.6.tgz
     version: 0.3.6
-generated: "2021-02-12T09:01:37.383713873+01:00"
+generated: "2021-02-15T11:25:25.905154368+01:00"
