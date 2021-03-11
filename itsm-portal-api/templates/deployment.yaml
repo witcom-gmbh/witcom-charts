@@ -1,0 +1,98 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "itsm-portal-api.fullname" . }}
+  labels:
+    {{- include "itsm-portal-api.labels" . | nindent 4 }}
+spec:
+{{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+{{- end }}
+  selector:
+    matchLabels:
+      {{- include "itsm-portal-api.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+    {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      labels:
+        {{- include "itsm-portal-api.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "itsm-portal-api.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: DB_DATABASE
+              value: {{ .Values.db.name }}
+            - name: DB_HOST
+              value: {{ .Values.db.host }}
+            - name: DB_USER
+              value: {{ .Values.db.user }}
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.db.secretName | default (printf "%s-db" (include "itsm-portal-api.fullname" .)) }}
+                  key: {{ .Values.db.secretKey | default "secret" }}
+            - name: DB_CREATE_TABLES
+              value: "{{ .Values.db.createTables }}"
+            - name: ELASTICSEARCH_HOST
+              value: {{ .Values.es.host }}
+            - name: ELASTICSEARCH_PREFIX
+              value: {{ .Values.es.docPrefix }}
+            - name: ELASTICSEARCH_UPDATE_INTERVAL
+              value: "{{ .Values.es.updateInterval }}"
+            - name: KEYCLOAK_AUTH_SERVER_URL
+              value: {{ .Values.oauth.authServer }}
+            - name: KEYCLOAK_REALM
+              value: {{ .Values.oauth.realm }}
+            - name: KEYCLOAK_RESOURCE
+              value: {{ .Values.oauth.resourceClientId }}
+            - name: KEYCLOAK_RESOURCE_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.oauth.clientSecretName | default (printf "%s-oauth" (include "itsm-portal-api.fullname" .)) }}
+                  key: {{ .Values.oauth.clientSecretKey | default "secret" }}
+            - name: SESSION_SECRET
+              value: {{ randAlphaNum 16 }}
+            - name: EXPOSE_DOCS
+              value: "{{ .Values.api.exposeDocs }}"
+            - name: TZ
+              value: {{ .Values.api.timeZone | default "Europe/Berlin" }}
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
