@@ -3,7 +3,7 @@ entries:
   apicurio-registry-streams:
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2021-03-11T09:03:32.683264785+01:00"
+    created: "2021-03-16T13:43:13.53259846+01:00"
     description: A Helm chart for deploying APICURIO-Registry with Kafka-Streams-Backend
       on Kubernetes
     digest: 9d171bd9026e8cdebbb7f6fba5d7fe7dfea8229eb9fa60633af3434c9abc70af
@@ -14,8 +14,18 @@ entries:
     version: 0.3.2
   itsm-portal-api:
   - apiVersion: v2
+    appVersion: 1.0.11
+    created: "2021-03-16T13:43:13.534522987+01:00"
+    description: Helm-Chart fuer die WiTCOM Portal-API
+    digest: 90beb81f2946567f66e6fe9c5d652a294db8a89ef7ff1fe929227679ee2763ff
+    name: itsm-portal-api
+    type: application
+    urls:
+    - https://witcom-gmbh.github.io/witcom-charts/itsm-portal-api-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     appVersion: 1.0.10
-    created: "2021-03-11T09:03:32.684358342+01:00"
+    created: "2021-03-16T13:43:13.533512902+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: f4833a6d0c2d6eb6f869e0837b3f0d943a0b1f0316b4c0ce89cf66008f2b990f
     name: itsm-portal-api
@@ -26,7 +36,7 @@ entries:
   itsm-portal-webapp:
   - apiVersion: v2
     appVersion: 1.1.3
-    created: "2021-03-11T09:03:32.685410412+01:00"
+    created: "2021-03-16T13:43:13.535517937+01:00"
     description: A Helm chart for Kubernetes
     digest: b8a120c21906180c48e147a3627090fa35c2ccef83c43afc01d0aa8df6edd084
     name: itsm-portal-webapp
@@ -37,7 +47,7 @@ entries:
   opendistro-es:
   - apiVersion: v1
     appVersion: 1.12.0
-    created: "2021-03-11T09:03:32.688108922+01:00"
+    created: "2021-03-16T13:43:13.538310398+01:00"
     description: Open Distro for Elasticsearch
     digest: 838aeb1c2f1e88df2758b011f904747f215033b25cbc0f73a5cdc053f582521b
     kubeVersion: ^1.10.0-0
@@ -55,7 +65,7 @@ entries:
   prometheus-json-exporter:
   - apiVersion: v2
     appVersion: latest
-    created: "2021-03-11T09:03:32.689016656+01:00"
+    created: "2021-03-16T13:43:13.540036717+01:00"
     description: A Helm chart for Kubernetes
     digest: 0c44073a5d78447dfa9ef0f3bacd88f02c9ce7a472bc70202f7d0ba17a746ebd
     name: prometheus-json-exporter
@@ -66,7 +76,7 @@ entries:
   witcom-api-gateway:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-03-11T09:03:32.691388078+01:00"
+    created: "2021-03-16T13:43:13.543070147+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 57192ab0e96907122df1c6d899d1314ef72ea5e562a13ed7fec03be4ddedcbbc
     name: witcom-api-gateway
@@ -76,7 +86,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-03-11T09:03:32.690102686+01:00"
+    created: "2021-03-16T13:43:13.541383138+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 6c414046e32504c671b184e1306b809b41b37ffd46d82f4cf4e4f51d4245e3d5
     name: witcom-api-gateway
@@ -87,7 +97,7 @@ entries:
   witcom-id-generator:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2021-03-11T09:03:32.706084511+01:00"
+    created: "2021-03-16T13:43:13.557466913+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -102,7 +112,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-03-11T09:03:32.69942074+01:00"
+    created: "2021-03-16T13:43:13.550182615+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -118,7 +128,7 @@ entries:
   witcom-zim:
   - apiVersion: v1
     appVersion: 1.0.4
-    created: "2021-03-11T09:03:32.710685069+01:00"
+    created: "2021-03-16T13:43:13.564409603+01:00"
     dependencies:
     - alias: mariadbzimuaa
       name: mariadb
@@ -134,4 +144,4 @@ entries:
     urls:
     - https://witcom-gmbh.github.io/witcom-charts/witcom-zim-0.3.6.tgz
     version: 0.3.6
-generated: "2021-03-11T09:03:32.681548887+01:00"
+generated: "2021-03-16T13:43:13.531032309+01:00"
