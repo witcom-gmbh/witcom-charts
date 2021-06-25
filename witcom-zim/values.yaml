@@ -35,7 +35,7 @@ rmdbsvc:
   replicaCount: 1
   image:
     name: pub-registry.dev.witcom.services/witcom/zim-rmdbsvc
-    tag: 1.0.3
+    tag: 1.0.4
     pullPolicy: IfNotPresent
 
   resources: {}
