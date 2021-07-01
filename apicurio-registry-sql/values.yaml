@@ -1,0 +1,136 @@
+# Default values for apicurio-registry-streams.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: "apicurio/apicurio-registry-jpa"
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  #tag: "0.0.4"
+
+sql:
+  dbHost: {}
+  dbName: {}
+  dbUser: {}
+  dbPasswordSecret: {}
+  dbPasswordSecretKey: {}
+
+secureAccess:
+  #Keycloak-Base-Url
+  keycloakServerUrl: {}
+  #Keycloak-Relam
+  keycloakRealm: {}
+  #ID of keycloak resource-server client
+  keycloakResource: {} 
+  #create oauth-client secret ?
+  createSecret: false
+  #if so, take value from here
+  secret: {}
+  #Client secret is written to (and read from) this K8S secret
+  #defaults to release-full-name + "-secure-access"
+  clientSecretName: {}
+  #defaults to "secret"
+  clientSecretKey: secret
+  api:
+    enabled: false
+    service:
+      type: ClusterIP
+      port: 8081
+    ingress:
+      enabled: false
+      annotations: {}
+        # kubernetes.io/ingress.class: nginx
+        # kubernetes.io/tls-acme: "true"
+      hosts:
+        - host: chart-example.local
+          paths: []
+      tls: []
+      #  - secretName: chart-example-tls
+      #    hosts:
+      #      - chart-example.local
+    image:
+       repository: "pub-registry.dev.witcom.services/witcom/apicurio-security-gateway"
+       pullPolicy: Always
+       tag: "latest"
+  ui:
+    enabled: false
+    #Group is required
+    keycloakGroup:
+    service:
+      type: ClusterIP
+      port: 8082
+    image:
+       repository: "quay.io/oauth2-proxy/oauth2-proxy"
+       pullPolicy: Always
+       tag: "latest"
+
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext:
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  runAsNonRoot: true
+  runAsUser: 1000
+
+service:
+  type: ClusterIP
+  port: 8080
+
+ingress:
+  enabled: false
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: chart-example.local
+      paths: []
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

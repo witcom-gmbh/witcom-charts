@@ -1,0 +1,17 @@
+{{- if .Values.secureAccess.ui.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "apicurio-registry-sql.fullname" . }}-secure-ui
+  labels:
+    {{- include "apicurio-registry-sql.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.secureAccess.ui.service.type }}
+  ports:
+    - port: {{ .Values.secureAccess.ui.service.port }}
+      targetPort: {{ .Values.secureAccess.ui.service.port }}
+      protocol: TCP
+      name: http-ui-security
+  selector:
+    {{- include "apicurio-registry-sql.selectorLabels" . | nindent 4 }}
+{{- end }}

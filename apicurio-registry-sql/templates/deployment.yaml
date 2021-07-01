@@ -1,0 +1,163 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "apicurio-registry-sql.fullname" . }}
+  labels:
+    {{- include "apicurio-registry-sql.labels" . | nindent 4 }}
+spec:
+{{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+{{- end }}
+  selector:
+    matchLabels:
+      {{- include "apicurio-registry-sql.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+    {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      labels:
+        {{- include "apicurio-registry-sql.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "apicurio-registry-sql.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        {{- if .Values.secureAccess.ui.enabled }}
+        - name: security-ui
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.secureAccess.ui.image.repository }}:{{ .Values.secureAccess.ui.image.tag }}"
+          imagePullPolicy: {{ .Values.secureAccess.ui.image.pullPolicy }}
+          args:
+          - --provider=keycloak
+          - --login-url={{ .Values.secureAccess.keycloakServerUrl }}/realms/{{ .Values.secureAccess.keycloakRealm }}/protocol/openid-connect/auth
+          - --redeem-url={{ .Values.secureAccess.keycloakServerUrl }}/realms/{{ .Values.secureAccess.keycloakRealm }}/protocol/openid-connect/token
+          - --validate-url={{ .Values.secureAccess.keycloakServerUrl }}/realms/{{ .Values.secureAccess.keycloakRealm }}/protocol/openid-connect/userinfo
+          - --scope={{ .Values.secureAccess.keycloakScopes | default "profile" }}
+          - --email-domain=*
+          - --skip-jwt-bearer-tokens=true
+          {{- if .Values.secureAccess.ui.keycloakGroup }}
+          - --keycloak-group={{ .Values.secureAccess.ui.keycloakGroup }}
+          {{- end }}
+          - --skip-provider-button=true
+          - --upstream="http://localhost:{{ .Values.service.port }}"
+          - --http-address=0.0.0.0:{{ .Values.secureAccess.ui.service.port }}
+          env:
+            - name: OAUTH2_PROXY_CLIENT_ID
+              value: {{ .Values.secureAccess.keycloakResource }}
+            - name: OAUTH2_PROXY_COOKIE_SECRET
+              value: {{ randAlphaNum 16 }}
+            - name: OAUTH2_PROXY_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secureAccess.clientSecretName | default (printf "%s-secure-access" (include "apicurio-registry-sql.fullname" .)) }}
+                  key: {{ .Values.secureAccess.clientSecretKey | default "secret" }}
+          ports:
+            - name: http-ui-sec
+              containerPort: {{ .Values.secureAccess.ui.service.port }}
+              protocol: TCP
+        {{- end }}
+        {{- if .Values.secureAccess.api.enabled }}
+        - name: security-gateway
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.secureAccess.api.image.repository }}:{{ .Values.secureAccess.api.image.tag }}"
+          imagePullPolicy: {{ .Values.secureAccess.api.image.pullPolicy }}
+          env:
+            - name: KEYCLOAK_SERVER_URL
+              value: {{ .Values.secureAccess.keycloakServerUrl }}
+            - name: KEYCLOAK_REALM_ID     
+              value: {{ .Values.secureAccess.keycloakRealm }}
+            - name: KEYCLOAK_RESOURCE_ID
+              value: {{ .Values.secureAccess.keycloakResource }}
+            - name: APICURIO_URL
+              value: http://localhost:{{ .Values.service.port }}
+            - name: GATEWAY_PORT
+              value: "{{ .Values.secureAccess.api.service.port }}"
+          ports:
+            - name: http-security
+              containerPort: {{ .Values.secureAccess.api.service.port }}
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /gateway/health
+              port: http-security
+              scheme: HTTP
+            initialDelaySeconds: 5
+            timeoutSeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /gateway/health
+              port: http-security
+              scheme: HTTP
+            initialDelaySeconds: 5
+            timeoutSeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+        {{- end }}
+        - name: schema-registry
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: QUARKUS_DATASOURCE_URL
+              value: "jdbc:postgresql://{{ .Values.sql.dbHost}}/{{ .Values.sql.dbName}}"
+            - name: QUARKUS_DATASOURCE_USERNAME
+              value: "{{ .Values.sql.dbUser}}"
+            - name: QUARKUS_DATASOURCE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.sql.dbPasswordSecret }}
+                  key: {{ .Values.sql.dbPasswordSecretKey }}
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /health/live
+              port: http
+              scheme: HTTP
+            initialDelaySeconds: 5
+            timeoutSeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /health/ready
+              port: http
+              scheme: HTTP
+            initialDelaySeconds: 5
+            timeoutSeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 3
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+
