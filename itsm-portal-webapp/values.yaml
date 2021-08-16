@@ -84,6 +84,7 @@ tolerations: []
 affinity: {}
 
 settings:
+  production: true
   language: de_DE
   keycloakConfig:
     url: ""
