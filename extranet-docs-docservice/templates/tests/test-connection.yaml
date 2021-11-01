@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "extranet-docs-docservice.fullname" . }}-test-connection"
+  labels:
+    {{- include "extranet-docs-docservice.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "extranet-docs-docservice.fullname" . }}:{{ .Values.service.port }}/health']
+  restartPolicy: Never
