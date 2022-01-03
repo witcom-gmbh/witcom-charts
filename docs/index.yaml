@@ -3,7 +3,7 @@ entries:
   apicurio-registry-sql:
   - apiVersion: v2
     appVersion: 1.3.2.Final
-    created: "2021-12-22T10:47:38.067452+01:00"
+    created: "2022-01-03T11:47:13.6731294+01:00"
     description: A Helm chart for a SQL-based APICURIO schema registry
     digest: 9e8a5829519b47d4669152518d259b6f217576837da484d7146f548a1e6c7300
     name: apicurio-registry-sql
@@ -14,7 +14,7 @@ entries:
   apicurio-registry-streams:
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2021-12-22T10:47:38.0680389+01:00"
+    created: "2022-01-03T11:47:13.673934+01:00"
     description: A Helm chart for deploying APICURIO-Registry with Kafka-Streams-Backend
       on Kubernetes
     digest: 9d171bd9026e8cdebbb7f6fba5d7fe7dfea8229eb9fa60633af3434c9abc70af
@@ -25,8 +25,18 @@ entries:
     version: 0.3.2
   command-source-connector:
   - apiVersion: v2
+    appVersion: 0.9.6
+    created: "2022-01-03T11:47:13.675762+01:00"
+    description: A Helm chart for Kubernetes
+    digest: e9e08025c9826e55946537930cd9dfbe93ae1c9e4d6aa6093d808332de2f00af
+    name: command-source-connector
+    type: application
+    urls:
+    - https://witcom-gmbh.github.io/witcom-charts/command-source-connector-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
     appVersion: 0.9.5
-    created: "2021-12-22T10:47:38.0691969+01:00"
+    created: "2022-01-03T11:47:13.6752927+01:00"
     description: A Helm chart for Kubernetes
     digest: 2303223c6158d25a2213a71543cfdacd7319d9acae99020aa27e852a93d02a29
     name: command-source-connector
@@ -36,7 +46,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.9.3
-    created: "2021-12-22T10:47:38.0686185+01:00"
+    created: "2022-01-03T11:47:13.6746131+01:00"
     description: A Helm chart for Kubernetes
     digest: 838b9f04c9d013c144a70224a13fbd53a8730d6eaae6bc80443a211b335374f2
     name: command-source-connector
@@ -47,7 +57,7 @@ entries:
   extranet-docs-docservice:
   - apiVersion: v2
     appVersion: latest
-    created: "2021-12-22T10:47:38.0697645+01:00"
+    created: "2022-01-03T11:47:13.6763667+01:00"
     description: Helm chart for WiTCOM extranet-docs-doc-service
     digest: db2af64030bd3baa44803ebfdc7e0e7dce0fc96c26ebb7b3f70fe2329176dd10
     name: extranet-docs-docservice
@@ -58,7 +68,7 @@ entries:
   itsm-portal-api:
   - apiVersion: v2
     appVersion: 1.0.16
-    created: "2021-12-22T10:47:38.0738658+01:00"
+    created: "2022-01-03T11:47:13.6819738+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: 33c8ae4a4ed019ed82ce27a392f3410cdc2bd7dedc1d321ced05b66119477ff8
     name: itsm-portal-api
@@ -68,7 +78,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 1.0.15
-    created: "2021-12-22T10:47:38.0733881+01:00"
+    created: "2022-01-03T11:47:13.6813297+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: fe0a91e9fd56b44f8d234bba86cb4f7259b81b91bb5cc84a76159cf77eec8bf5
     name: itsm-portal-api
@@ -78,7 +88,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 1.0.14
-    created: "2021-12-22T10:47:38.0729038+01:00"
+    created: "2022-01-03T11:47:13.6804286+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: a2c1b5e1dd837fc65dfcefbff7cccbc4948783b60f4e576a6c60058a5c932e57
     name: itsm-portal-api
@@ -88,7 +98,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.0.13
-    created: "2021-12-22T10:47:38.0723884+01:00"
+    created: "2022-01-03T11:47:13.6794873+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: 08b6df4fc24623c0744ab314a92d15d68a60143614c01fe470c1044f00a83651
     name: itsm-portal-api
@@ -98,7 +108,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.0.12
-    created: "2021-12-22T10:47:38.0713394+01:00"
+    created: "2022-01-03T11:47:13.6781803+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: 9dd16e1b317fdf5fa0241dbb30beb7a6e17f46eebe5331f91435a35e044c3ec9
     name: itsm-portal-api
@@ -108,7 +118,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.0.11
-    created: "2021-12-22T10:47:38.0708182+01:00"
+    created: "2022-01-03T11:47:13.6775783+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: 90beb81f2946567f66e6fe9c5d652a294db8a89ef7ff1fe929227679ee2763ff
     name: itsm-portal-api
@@ -118,7 +128,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.0.10
-    created: "2021-12-22T10:47:38.0702742+01:00"
+    created: "2022-01-03T11:47:13.6769679+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: f4833a6d0c2d6eb6f869e0837b3f0d943a0b1f0316b4c0ce89cf66008f2b990f
     name: itsm-portal-api
@@ -129,7 +139,7 @@ entries:
   itsm-portal-webapp:
   - apiVersion: v2
     appVersion: 1.1.7
-    created: "2021-12-22T10:47:38.0758375+01:00"
+    created: "2022-01-03T11:47:13.6846816+01:00"
     description: A Helm chart for Kubernetes
     digest: e36bce3e562742d73253417a669a6c57c34f6a73cb9f9f850f9d3114a57711f7
     name: itsm-portal-webapp
@@ -139,7 +149,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.1.6
-    created: "2021-12-22T10:47:38.0754344+01:00"
+    created: "2022-01-03T11:47:13.6841451+01:00"
     description: A Helm chart for Kubernetes
     digest: 97f2774a5513592a39001f61d67d10322456495edb43ec337d041ae6015011ae
     name: itsm-portal-webapp
@@ -149,7 +159,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.1.5
-    created: "2021-12-22T10:47:38.0750217+01:00"
+    created: "2022-01-03T11:47:13.6836186+01:00"
     description: A Helm chart for Kubernetes
     digest: 2837214a65862a13a75b6729a3b86f3a6a181fc93da811233fb4ef0d63878dcb
     name: itsm-portal-webapp
@@ -159,7 +169,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.1.4
-    created: "2021-12-22T10:47:38.0746376+01:00"
+    created: "2022-01-03T11:47:13.6830808+01:00"
     description: A Helm chart for Kubernetes
     digest: b0fe93ca95cea58f4bf4653293111b28f23a2a8143df636cc2db422fb5e1cdbf
     name: itsm-portal-webapp
@@ -169,7 +179,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.1.3
-    created: "2021-12-22T10:47:38.0742498+01:00"
+    created: "2022-01-03T11:47:13.682529+01:00"
     description: A Helm chart for Kubernetes
     digest: b8a120c21906180c48e147a3627090fa35c2ccef83c43afc01d0aa8df6edd084
     name: itsm-portal-webapp
@@ -180,7 +190,7 @@ entries:
   noc-api:
   - apiVersion: v2
     appVersion: 0.9.0
-    created: "2021-12-22T10:47:38.0762599+01:00"
+    created: "2022-01-03T11:47:13.6852736+01:00"
     description: Helm chart for NOC-Api microservice
     digest: d2f8ffb555520986b219331418e70966296809f846954639f3734cbb3dbf4745
     name: noc-api
@@ -191,7 +201,7 @@ entries:
   opendistro-es:
   - apiVersion: v1
     appVersion: 1.13.3
-    created: "2021-12-22T10:47:38.0792348+01:00"
+    created: "2022-01-03T11:47:13.6892445+01:00"
     description: Open Distro for Elasticsearch
     digest: 2f70753d87c05c5e4962c7983f3a8bc05c86ef537cdb5d97427e06a0df463338
     kubeVersion: ^1.10.0-0
@@ -208,7 +218,7 @@ entries:
     version: 1.13.3
   - apiVersion: v1
     appVersion: 1.12.0
-    created: "2021-12-22T10:47:38.077514+01:00"
+    created: "2022-01-03T11:47:13.6873577+01:00"
     description: Open Distro for Elasticsearch
     digest: 838aeb1c2f1e88df2758b011f904747f215033b25cbc0f73a5cdc053f582521b
     kubeVersion: ^1.10.0-0
@@ -226,7 +236,7 @@ entries:
   prometheus-json-exporter:
   - apiVersion: v2
     appVersion: latest
-    created: "2021-12-22T10:47:38.0795894+01:00"
+    created: "2022-01-03T11:47:13.6898483+01:00"
     description: A Helm chart for Kubernetes
     digest: 0c44073a5d78447dfa9ef0f3bacd88f02c9ce7a472bc70202f7d0ba17a746ebd
     name: prometheus-json-exporter
@@ -237,7 +247,7 @@ entries:
   witcom-api-gateway:
   - apiVersion: v2
     appVersion: 1.3.1
-    created: "2021-12-22T10:47:38.0827168+01:00"
+    created: "2022-01-03T11:47:13.6937367+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 73d1943b581224d97b71f233ef34572f2af9011d9f191a5bea3e2d247461114e
     name: witcom-api-gateway
@@ -247,7 +257,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2021-12-22T10:47:38.0823056+01:00"
+    created: "2022-01-03T11:47:13.6930764+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 5e7bc8dc0870242819b45b183195a2055835a7f25955f0b832794aa8ac372288
     name: witcom-api-gateway
@@ -257,7 +267,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.2.1
-    created: "2021-12-22T10:47:38.0819007+01:00"
+    created: "2022-01-03T11:47:13.6924475+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: f589e92eb1770a7ec46124b9d215906b9ca18ba42117c949d877a964b57c8ea3
     name: witcom-api-gateway
@@ -267,7 +277,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: 1.2.0
-    created: "2021-12-22T10:47:38.0808751+01:00"
+    created: "2022-01-03T11:47:13.6918128+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: e160fc2961d8be7ee3fb5f3b9b6f7d23affbdece8f6155a957a909f3c14f9969
     name: witcom-api-gateway
@@ -277,7 +287,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-12-22T10:47:38.0804387+01:00"
+    created: "2022-01-03T11:47:13.6911691+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 57192ab0e96907122df1c6d899d1314ef72ea5e562a13ed7fec03be4ddedcbbc
     name: witcom-api-gateway
@@ -287,7 +297,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-12-22T10:47:38.0800071+01:00"
+    created: "2022-01-03T11:47:13.6904728+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 6c414046e32504c671b184e1306b809b41b37ffd46d82f4cf4e4f51d4245e3d5
     name: witcom-api-gateway
@@ -298,7 +308,7 @@ entries:
   witcom-id-generator:
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2021-12-22T10:47:38.0898042+01:00"
+    created: "2022-01-03T11:47:13.70174+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -313,7 +323,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2021-12-22T10:47:38.0867943+01:00"
+    created: "2022-01-03T11:47:13.6981377+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -329,7 +339,7 @@ entries:
   witcom-zim:
   - apiVersion: v1
     appVersion: 1.0.5
-    created: "2021-12-22T10:47:38.0961993+01:00"
+    created: "2022-01-03T11:47:13.7096687+01:00"
     dependencies:
     - alias: mariadbzimuaa
       name: mariadb
@@ -347,7 +357,7 @@ entries:
     version: 0.3.8
   - apiVersion: v1
     appVersion: 1.0.5
-    created: "2021-12-22T10:47:38.094375+01:00"
+    created: "2022-01-03T11:47:13.7072604+01:00"
     dependencies:
     - alias: mariadbzimuaa
       name: mariadb
@@ -365,7 +375,7 @@ entries:
     version: 0.3.7
   - apiVersion: v1
     appVersion: 1.0.4
-    created: "2021-12-22T10:47:38.0919993+01:00"
+    created: "2022-01-03T11:47:13.704251+01:00"
     dependencies:
     - alias: mariadbzimuaa
       name: mariadb
@@ -381,4 +391,4 @@ entries:
     urls:
     - https://witcom-gmbh.github.io/witcom-charts/witcom-zim-0.3.6.tgz
     version: 0.3.6
-generated: "2021-12-22T10:47:38.0668287+01:00"
+generated: "2022-01-03T11:47:13.6720661+01:00"
