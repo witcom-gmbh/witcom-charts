@@ -1,0 +1,17 @@
+{{- $svcName := ternary "oauthproxy" "https" .Values.oauthProxy.enabled -}}
+{{- $svcPort := ternary "3000" "8000" .Values.oauthProxy.enabled -}}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "kafka-connect-ui.fullname" . }}
+  labels:
+    {{- include "kafka-connect-ui.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ $svcPort }}
+      targetPort: {{ $svcName }}
+      protocol: TCP
+      name: {{ $svcName }}
+  selector:
+    {{- include "kafka-connect-ui.selectorLabels" . | nindent 4 }}
