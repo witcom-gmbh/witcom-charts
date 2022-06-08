@@ -19,9 +19,6 @@ metadata:
   labels:
     {{- include "itsm-portal-api.labels" . | nindent 4 }}
   annotations:
-    {{- if .Values.ingress.private.ingressClass }}
-    kubernetes.io/ingress.class: {{ .Values.ingress.private.ingressClass}}
-    {{- end }}
     {{- with .Values.ingress.annotations }}
     {{- toYaml . | nindent 4 }}
     {{- end }}
