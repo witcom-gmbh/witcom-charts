@@ -2,8 +2,8 @@
 {{- $fullName := include "itsm-portal-webapp.fullname" . -}}
 {{- $svcPort := .Values.service.port -}}
 {{- if and .Values.ingress.private.ingressClass (not (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion)) }}
-  {{- if not (hasKey .Values.ingress.private.annotations "kubernetes.io/ingress.class") }}
-  {{- $_ := set .Values.ingress.private.annotations "kubernetes.io/ingress.class" .Values.generator.ingress.private.ingressClass}}
+  {{- if not (hasKey .Values.ingress.annotations "kubernetes.io/ingress.class") }}
+  {{- $_ := set .Values.ingress.annotations "kubernetes.io/ingress.class" .Values.generator.ingress.private.ingressClass}}
   {{- end }}
 {{- end }}
 {{- if semverCompare ">=1.19-0" .Capabilities.KubeVersion.GitVersion -}}
