@@ -73,6 +73,7 @@ generator:
 
   ingress:
     enabled: false
+    className: "nginx"
     annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
@@ -152,6 +153,7 @@ webapp:
 
   ingress:
     enabled: false
+    className: "nginx"
     annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
