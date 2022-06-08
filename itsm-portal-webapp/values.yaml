@@ -50,9 +50,11 @@ ingress:
   # ingress.class is set by template
   annotations: {}
     # kubernetes.io/tls-acme: "true"
-  hosts:
-    - host: chart-example.local
-      paths: []
+  hosts: []
+  #  - host: chart-example.local
+  #    paths:
+  #    - path: /
+  #      pathType: ImplementationSpecific  
   tls: []
   #  - secretName: chart-example-tls
   #    hosts:
