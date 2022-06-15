@@ -1,0 +1,10 @@
+apiVersion: v1
+appVersion: 0.2.4
+description: A PowerDNS web interface with advanced features.
+maintainers:
+- email: c.buchberger@witcom.de
+  name: Carsten Buchberger
+name: powerdnsadmin
+sources:
+- https://github.com/ngoduykhanh/PowerDNS-Admin
+version: 0.3.0
