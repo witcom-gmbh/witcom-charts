@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "vaultwarden.fullname" . }}
+  labels:
+    {{- include "vaultwarden.labels" . | nindent 4 }}
+data:
+  SIGNUPS_ALLOWED: "{{ .Values.config.signupsAllowed | default true }}"
+  INVITATIONS_ALLOWED: "{{ .Values.config.invitationsAllowed | default true }}"
+  SHOW_PASSWORD_HINT: "{{ .Values.config.showPasswordHint | default false }}"
+  DATA_FOLDER: "{{ .Values.config.dataFolder | default "data" }}"
+  DATABASE_URL: "{{ .Values.config.database.url | default "data/db.sqlite3" }}"
+  DATABASE_MAX_CONNS: "{{ .Values.config.database.maxConnections | default "10" }}"
+  DATABASE_CONN_INIT: "{{ .Values.config.database.connectionInit | default "" }}"  
+  {{ if .Values.config.smtp -}}
+  SMTP_HOST: "{{ .Values.config.smtp.host | default "" }}"
+  SMTP_FROM: "{{ .Values.config.smtp.from | default "" }}"
+  SMTP_FROM_NAME: "{{ .Values.config.smtp.fromName | default "" }}"
+  SMTP_PORT: "{{ .Values.config.smtp.port | default "587" }}"
+  SMTP_SECURITY: "{{ .Values.config.smtp.security | default "starttls" }}"
+  {{ if .Values.config.smtp.username -}}SMTP_USERNAME: {{ .Values.config.smtp.username }}{{- end }}
+  {{ if .Values.config.smtp.password -}}SMTP_PASSWORD: {{ .Values.config.smtp.password }}{{- end }}
+  {{- end }}  
+  {{ if .Values.config.domain -}}DOMAIN: {{ .Values.config.domain }}{{- end }}

@@ -1,0 +1,104 @@
+{{- if and .Values.backup.enabled .Values.persistence.enabled }}
+{{- if semverCompare ">=1.21-0" .Capabilities.KubeVersion.GitVersion -}}
+apiVersion: batch/v1
+{{- else -}}
+apiVersion: batch/v1beta1
+{{- end }}
+kind: CronJob
+metadata:
+  name: {{ printf "%s-backup" (include "vaultwarden.fullname" .) }}
+  labels:
+    {{- include "dbbackup.labels" . | nindent 4 }}
+    {{- include "dbbackupjob.labels" . | nindent 4 }}
+spec:
+  concurrencyPolicy: Forbid
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    metadata:
+      {{- with .Values.backup.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "dbbackup.selectorLabels" . | nindent 8 }}
+        {{- include "dbbackupjob.labels" . | nindent 8 }}
+        {{- with .Values.backup.podLabels }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
+    spec:
+      backoffLimit: 2 
+      template:
+        metadata:
+          labels:
+            {{- include "dbbackup.selectorLabels" . | nindent 12 }}
+            {{- include "dbbackupjob.labels" . | nindent 12 }}
+            {{- with .Values.backup.podLabels }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
+        spec:
+          {{- with .Values.backup.imagePullSecrets }}
+          imagePullSecrets:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          affinity:
+            podAffinity:
+              requiredDuringSchedulingIgnoredDuringExecution:
+              - labelSelector:
+                  matchExpressions:
+                  - key: app.kubernetes.io/instance
+                    operator: In
+                    values: 
+                    - {{ .Release.Name }}
+                  - key: app.kubernetes.io/name
+                    operator: In
+                    values: 
+                    - {{ include "vaultwarden.name" . }}
+                topologyKey: kubernetes.io/hostname
+          containers:
+          - env:
+            - name: S3_ENDPOINT
+              value: {{ .Values.backup.s3.endpoint }}
+            - name: S3_BUCKET
+              value: {{ .Values.backup.s3.bucket }}
+            - name: S3_PREFIX
+              value: {{ .Values.backup.s3.prefix | default (include "vaultwarden.fullname" .)  }}
+            - name: S3_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "dbbackup.secretName" . }}
+                  key: S3_ACCESS_KEY_ID
+            - name: S3_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "dbbackup.secretName" . }}
+                  key: S3_SECRET_ACCESS_KEY
+            - name: RETENTION_DAYS
+              value: "{{ .Values.backup.retention | default "30" }}"
+            image: "{{ .Values.backup.image.repository }}:{{ .Values.backup.image.tag }}"
+            imagePullPolicy: {{ .Values.backup.image.pullPolicy }}                  
+            name: {{ printf "%s-backup" (include "vaultwarden.fullname" .) }}
+            terminationMessagePath: /dev/termination-log
+            terminationMessagePolicy: File
+            volumeMounts:
+            - mountPath: "/data"
+              name: data
+              readOnly: true
+            resources:
+              {{- toYaml .Values.cloudBackupResources | nindent 14 }}
+          dnsPolicy: ClusterFirst
+          restartPolicy: Never
+          schedulerName: default-scheduler
+          terminationGracePeriodSeconds: 30
+          volumes:
+          - name: data
+            {{- if .Values.persistence.enabled }}
+            persistentVolumeClaim:
+              claimName: {{ if .Values.persistence.existingClaim }}{{ .Values.persistence.existingClaim }}{{- else }}{{ template "vaultwarden.fullname" . }}{{- end }}
+              readOnly: true          
+            {{- else }}
+            emptyDir: {}
+            {{- end }}              
+  schedule: {{ .Values.backup.schedule | default "0 */4 * * *" }}
+  successfulJobsHistoryLimit: 1
+  suspend: false
+{{- end }}
