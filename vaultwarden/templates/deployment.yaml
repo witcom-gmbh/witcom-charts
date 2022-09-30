@@ -1,0 +1,120 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "vaultwarden.fullname" . }}
+  labels:
+    {{- include "vaultwarden.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      {{- include "vaultwarden.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "vaultwarden.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "vaultwarden.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      initContainers:
+        - name: changeowner
+          image: busybox
+          command: ["sh", "-c", "chown -R 1000:1000 /data"]   
+          volumeMounts:
+          - name: data
+            mountPath: /{{ .Values.config.dataFolder | default "data" }}
+            {{- if and .Values.persistence.enabled .Values.persistence.subPath }}
+            subPath: {{ .Values.persistence.subPath }}
+            {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          envFrom:
+            - configMapRef:
+                name: {{ include "vaultwarden.fullname" . }} 
+            {{- if .Values.config.adminToken.enabled }}
+          env:
+            - name: ROCKET_PORT
+              value: "{{ .Values.service.port }}"
+            - name: ADMIN_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.config.adminToken.secretName | default (printf "%s" (include "vaultwarden.fullname" .)) }}
+                  key: {{ .Values.config.adminToken.secretKey | default "admin-token" }}
+            {{- end }}
+{{- with .Values.extraEnv }}
+{{ tpl . $ | indent 12 }}
+{{- end }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port }}
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          volumeMounts:
+          - name: data
+            mountPath: /{{ .Values.config.dataFolder | default "data" }}
+            {{- if and .Values.persistence.enabled .Values.persistence.subPath }}
+            subPath: {{ .Values.persistence.subPath }}
+            {{- end }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+      - name: data
+        {{- if .Values.persistence.enabled }}
+        persistentVolumeClaim:
+          claimName: {{ if .Values.persistence.existingClaim }}{{ .Values.persistence.existingClaim }}{{- else }}{{ template "vaultwarden.fullname" . }}{{- end }}
+        {{- else }}
+        emptyDir: {}
+        {{- end }}
+      {{- if .Values.backup.enabled }}
+      affinity:
+        podAffinity:
+          # Add soft affinity to avoid race condition when cronjob already runs and has the volume mounted
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - podAffinityTerm:
+              labelSelector:
+                matchExpressions:
+                  - key: app.kubernetes.io/instance
+                    operator: In
+                    values: 
+                    - {{ .Release.Name }}
+                  - key: app.kubernetes.io/name
+                    operator: In
+                    values: 
+                    - {{ include "vaultwarden.name" . }}
+              topologyKey: kubernetes.io/hostname
+            weight: 100
+      {{- end }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
