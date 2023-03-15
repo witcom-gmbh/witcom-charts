@@ -70,6 +70,10 @@ spec:
               value: "{{ .Values.api.exposeDocs }}"
             - name: TZ
               value: {{ .Values.api.timeZone | default "Europe/Berlin" }}
+            #additional config  
+            {{- if .Values.configEnvVars }}
+{{ toYaml .Values.configEnvVars | indent 12 }}
+            {{- end }} 
           ports:
             - name: http
               containerPort: 8080

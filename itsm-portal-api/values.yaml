@@ -109,3 +109,4 @@ api:
   exposeDocs: 1
   timeZone: "Europe/Berlin"
      
+configEnvVars: {}
