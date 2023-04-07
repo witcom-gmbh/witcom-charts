@@ -29,7 +29,8 @@ spec:
         {{- toYaml .Values.webapp.podSecurityContext | nindent 8 }}
       initContainers:
         - name: init-config
-          image: pub-registry.dev.witcom.services/witcom/env2json:latest
+          image: "{{ .Values.webapp.init.image.repository }}:{{ .Values.webapp.init.image.tag }}"
+          imagePullPolicy: {{ .Values.webapp.init.image.pullPolicy }}
           env:
             - name: OUTPUT
               value: /config/appconfig.json

@@ -20,7 +20,7 @@ generator:
 
   replicaCount: 1
   image:
-    repository: pub-registry.dev.witcom.services/witcom/id-generator
+    repository: witcom/id-generator
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
     tag: "1.2.3"
@@ -124,10 +124,19 @@ webapp:
 
   replicaCount: 1
   image:
-    repository: pub-registry.dev.witcom.services/witcom/id-generator-webapp
+    repository: witcom/id-generator-webapp
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
     tag: "1.0.7"
+
+  init:
+    image:
+      repository: witcom/env2json
+      pullPolicy: IfNotPresent
+      # Overrides the image tag whose default is the chart appVersion.
+      tag: "latest"
+
+
 
   imagePullSecrets: []
   nameOverride: ""
