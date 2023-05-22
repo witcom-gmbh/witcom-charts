@@ -1,0 +1,13 @@
+apiVersion: v1
+data:
+  appconfig.json: |+
+    {
+      "APP_KEYCLOAK_REALM":"{{ .Values.global.keycloak.realm }}",
+      "APP_KEYCLOAK_CLIENT_ID": "{{ .Values.webapp.keycloak.clientId }}",
+      "APP_KEYCLOAK_URL": "{{ .Values.global.keycloak.serverUrl }}"
+    }
+kind: ConfigMap
+metadata:
+  name: {{ include "witcom-id-generator.fullname" . }}-webapp
+  labels:
+    {{- include "witcom-id-generator.webapp.labels" . | nindent 4 }}
