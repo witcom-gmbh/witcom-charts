@@ -23,7 +23,7 @@ generator:
     repository: witcom/id-generator
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
-    tag: "1.2.3"
+    tag: "v1.2.4"
 
   imagePullSecrets: []
   nameOverride: ""
@@ -71,22 +71,6 @@ generator:
     type: ClusterIP
     port: 3000
 
-  ingress:
-    enabled: false
-    className: "nginx"
-    annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
-    #hosts:
-    #  - host: ssc-28071-worker.witcom.services
-    #    paths:
-    #    - path: /
-    #      pathType: ImplementationSpecific
-    tls: []
-    #  - secretName: chart-example-tls
-    #    hosts:
-    #      - chart-example.local
-
   resources: {}
     # We usually recommend not to specify default resources and to leave this as a conscious
     # choice for the user. This also increases chances charts run on environments with little
@@ -127,16 +111,7 @@ webapp:
     repository: witcom/id-generator-webapp
     pullPolicy: IfNotPresent
     # Overrides the image tag whose default is the chart appVersion.
-    tag: "1.0.7"
-
-  init:
-    image:
-      repository: witcom/env2json
-      pullPolicy: IfNotPresent
-      # Overrides the image tag whose default is the chart appVersion.
-      tag: "latest"
-
-
+    tag: "v1.0.8"
 
   imagePullSecrets: []
   nameOverride: ""
