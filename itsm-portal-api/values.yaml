@@ -100,10 +100,10 @@ oauth:
   #clientSecretName:
   #clientSecretKey: 
 
-es:
+search:
   host: 
   docPrefix: "itsm-base"
-  updateInterval: 300
+
 
 api:
   exposeDocs: 1

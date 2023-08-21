@@ -47,12 +47,10 @@ spec:
                   key: {{ .Values.db.secretKey | default "secret" }}
             - name: DB_CREATE_TABLES
               value: "{{ .Values.db.createTables }}"
-            - name: ELASTICSEARCH_HOST
-              value: {{ .Values.es.host }}
-            - name: ELASTICSEARCH_PREFIX
-              value: {{ .Values.es.docPrefix }}
-            - name: ELASTICSEARCH_UPDATE_INTERVAL
-              value: "{{ .Values.es.updateInterval }}"
+            - name: SEARCH_HOST
+              value: {{ .Values.search.host }}
+            - name: SEARCH_PREFIX
+              value: {{ .Values.search.docPrefix }}
             - name: KEYCLOAK_AUTH_SERVER_URL
               value: {{ .Values.oauth.authServer }}
             - name: KEYCLOAK_REALM
