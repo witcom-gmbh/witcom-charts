@@ -93,8 +93,8 @@ settings:
     realm: ""
     clientId: itsm-portal-web-app
   apiUrl: ""
-  esUrl: ""
-  esPrefix: itsm-base
+  searchUrl: ""
+  searchPrefix: cdc
   rmdbUrl: ""
   nocUrl: ""
   smdbUrl: ""
