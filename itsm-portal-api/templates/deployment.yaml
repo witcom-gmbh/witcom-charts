@@ -51,6 +51,13 @@ spec:
               value: {{ .Values.search.host }}
             - name: SEARCH_PREFIX
               value: {{ .Values.search.docPrefix }}
+            - name: SEARCH_USER
+              value: {{ required "A valid search.auth.username entry is required!" .Values.search.auth.username }}
+            - name: SEARCH_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.search.auth.secretName | default (printf "%s-search" (include "itsm-portal-api.fullname" .)) }}
+                  key: {{ .Values.search.auth.passwordKey | default "password" }}
             - name: KEYCLOAK_AUTH_SERVER_URL
               value: {{ .Values.oauth.authServer }}
             - name: KEYCLOAK_REALM

@@ -103,7 +103,14 @@ oauth:
 search:
   host: 
   docPrefix: "itsm-base"
-
+  auth:
+    username: ""
+    createSecret: false
+    # password: topsecret 
+    # defaults to <full-name>-search
+    # secretName: {}
+    # defaults to password
+    # passwordKey: {}
 
 api:
   exposeDocs: 1
