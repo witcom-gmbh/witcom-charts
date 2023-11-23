@@ -3,7 +3,7 @@ entries:
   apicurio-registry-sql:
   - apiVersion: v2
     appVersion: 1.3.2.Final
-    created: "2023-10-02T17:15:29.356419538+02:00"
+    created: "2023-11-23T17:15:47.466544976+01:00"
     description: A Helm chart for a SQL-based APICURIO schema registry
     digest: 9e8a5829519b47d4669152518d259b6f217576837da484d7146f548a1e6c7300
     name: apicurio-registry-sql
@@ -14,7 +14,7 @@ entries:
   apicurio-registry-streams:
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2023-10-02T17:15:29.35720834+02:00"
+    created: "2023-11-23T17:15:47.467545177+01:00"
     description: A Helm chart for deploying APICURIO-Registry with Kafka-Streams-Backend
       on Kubernetes
     digest: 9d171bd9026e8cdebbb7f6fba5d7fe7dfea8229eb9fa60633af3434c9abc70af
@@ -26,7 +26,7 @@ entries:
   command-sink-connector:
   - apiVersion: v2
     appVersion: 0.2.4
-    created: "2023-10-02T17:15:29.365108264+02:00"
+    created: "2023-11-23T17:15:47.476502086+01:00"
     description: A Helm chart for Kubernetes
     digest: 506fd30604ba3242f6d09cfa872be9a7ba0f19971e64c6d63287be5ad2a42810
     name: command-sink-connector
@@ -36,7 +36,7 @@ entries:
     version: 0.2.4
   - apiVersion: v2
     appVersion: 0.2.3
-    created: "2023-10-02T17:15:29.364420362+02:00"
+    created: "2023-11-23T17:15:47.475802086+01:00"
     description: A Helm chart for Kubernetes
     digest: a41c2add09e6f620e861b85ad055c4007b9658f5158f092fe81f756c524c6057
     name: command-sink-connector
@@ -46,7 +46,7 @@ entries:
     version: 0.2.3
   - apiVersion: v2
     appVersion: 0.1.4
-    created: "2023-10-02T17:15:29.36372466+02:00"
+    created: "2023-11-23T17:15:47.474879885+01:00"
     description: A Helm chart for Kubernetes
     digest: d32767fc66868358636c8bc3a178965050f2d593de8008904362f0132acfedbf
     name: command-sink-connector
@@ -56,7 +56,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 0.1.3
-    created: "2023-10-02T17:15:29.363078258+02:00"
+    created: "2023-11-23T17:15:47.474072184+01:00"
     description: A Helm chart for Kubernetes
     digest: 0e20e99061a4bd3a7143b09817b9a9b69d4f571205176358909d8b15bca31366
     name: command-sink-connector
@@ -66,7 +66,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.1.2
-    created: "2023-10-02T17:15:29.362458156+02:00"
+    created: "2023-11-23T17:15:47.473345783+01:00"
     description: A Helm chart for Kubernetes
     digest: 1a6434f5b092915a1c23c285b84f60d78c770d22bb0d8f9a8db6ddeb4b099b39
     name: command-sink-connector
@@ -76,7 +76,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 0.1.1
-    created: "2023-10-02T17:15:29.361794454+02:00"
+    created: "2023-11-23T17:15:47.472696682+01:00"
     description: A Helm chart for Kubernetes
     digest: f395daf99d17af8b4e3d189e406cf7d59a58c559ae0b1e0b44ce204256e401bb
     name: command-sink-connector
@@ -86,7 +86,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-10-02T17:15:29.360300649+02:00"
+    created: "2023-11-23T17:15:47.472062982+01:00"
     description: A Helm chart for Kubernetes
     digest: 9e03b7969fd993f5c1aba0233192b5cde18e0cfb250b2e10b2e886ef3cecd147
     name: command-sink-connector
@@ -96,7 +96,7 @@ entries:
     version: 0.1.0
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2023-10-02T17:15:29.359648648+02:00"
+    created: "2023-11-23T17:15:47.46999358+01:00"
     description: A Helm chart for Kubernetes
     digest: 356d240f61b239e4816fdc8a0c5045a8bc49f0a953340271605174884e5762ee
     name: command-sink-connector
@@ -106,7 +106,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2023-10-02T17:15:29.359043846+02:00"
+    created: "2023-11-23T17:15:47.469375379+01:00"
     description: A Helm chart for Kubernetes
     digest: 99d027bc68817ceaade03b4d25e763e370186a4b317f60fb4d03c815254678c0
     name: command-sink-connector
@@ -116,7 +116,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2023-10-02T17:15:29.358431844+02:00"
+    created: "2023-11-23T17:15:47.468802678+01:00"
     description: A Helm chart for Kubernetes
     digest: 049ca5971cb8d30f9df05bad6152f45bf7f8db5324b06e9fb2900649683cd992
     name: command-sink-connector
@@ -126,7 +126,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2023-10-02T17:15:29.357841742+02:00"
+    created: "2023-11-23T17:15:47.468203278+01:00"
     description: A Helm chart for Kubernetes
     digest: 3456e537782f935961338fa395f0dcc4ee8cf4909c745151a4a5120e264f46fb
     name: command-sink-connector
@@ -137,7 +137,7 @@ entries:
   command-source-connector:
   - apiVersion: v2
     appVersion: 3.0.1
-    created: "2023-10-02T17:15:29.386546928+02:00"
+    created: "2023-11-23T17:15:47.500316212+01:00"
     description: Deployment for FNT command kafka source-connector
     digest: 3eb44e81276d8bf52b9ea68fc7ec1ee0231e2f89c2f4cd47abbf2d59e25fb1c5
     name: command-source-connector
@@ -147,7 +147,7 @@ entries:
     version: 0.7.2
   - apiVersion: v2
     appVersion: 3.0.1
-    created: "2023-10-02T17:15:29.385593125+02:00"
+    created: "2023-11-23T17:15:47.49917641+01:00"
     description: Deployment for FNT command kafka source-connector
     digest: aca4ba034c6ae05f4a5f4de1e0ef0bbe014588ea1302f4d98a6a429d27322371
     name: command-source-connector
@@ -157,7 +157,7 @@ entries:
     version: 0.7.1
   - apiVersion: v2
     appVersion: 3.0.0
-    created: "2023-10-02T17:15:29.384644323+02:00"
+    created: "2023-11-23T17:15:47.498006109+01:00"
     description: Deployment for FNT command kafka source-connector
     digest: bdcfdbed8471ddf17a2d9abe8665fc165f2d781977f24c3b08c15c9390d4c4f0
     name: command-source-connector
@@ -167,7 +167,7 @@ entries:
     version: 0.7.0
   - apiVersion: v2
     appVersion: 2.1.0
-    created: "2023-10-02T17:15:29.38369362+02:00"
+    created: "2023-11-23T17:15:47.496953408+01:00"
     description: Deployment for FNT command kafka source-connector
     digest: 510c6d8cff0599a32e60a2bb3158a5529c611f115844980c3b98e7d98ee902d7
     name: command-source-connector
@@ -177,7 +177,7 @@ entries:
     version: 0.6.2
   - apiVersion: v2
     appVersion: 2.0.5
-    created: "2023-10-02T17:15:29.382729217+02:00"
+    created: "2023-11-23T17:15:47.495820807+01:00"
     description: Deployment for FNT command kafka source-connector
     digest: ed283aebca97bffd5ff99397795ba225276d2f6cb3ba0a2126c846aad20d77c1
     name: command-source-connector
@@ -187,7 +187,7 @@ entries:
     version: 0.6.1
   - apiVersion: v2
     appVersion: 2.0.4
-    created: "2023-10-02T17:15:29.381649414+02:00"
+    created: "2023-11-23T17:15:47.494648106+01:00"
     description: Deployment for FNT command kafka source-connector
     digest: b5c6fa8ca1a62e0cc8e253183d2fec644aa4eaa056d2d549cdc2b7ed7b35e01d
     name: command-source-connector
@@ -197,7 +197,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 2.0.3
-    created: "2023-10-02T17:15:29.38059711+02:00"
+    created: "2023-11-23T17:15:47.493290504+01:00"
     description: A Helm chart for Kubernetes
     digest: 7cb6d716ae7740793c342a3fc49ebcc8cb29fbef0ebf7e0140c1dff7e8eafae2
     name: command-source-connector
@@ -207,7 +207,7 @@ entries:
     version: 0.5.3
   - apiVersion: v2
     appVersion: 2.0.2
-    created: "2023-10-02T17:15:29.378966806+02:00"
+    created: "2023-11-23T17:15:47.492080803+01:00"
     description: A Helm chart for Kubernetes
     digest: 0f06b4ad2d6e438930467abb03b3ea2c766074e80b565ec0771b4dd02a3bad5c
     name: command-source-connector
@@ -217,7 +217,7 @@ entries:
     version: 0.5.2
   - apiVersion: v2
     appVersion: 2.0.1
-    created: "2023-10-02T17:15:29.377921102+02:00"
+    created: "2023-11-23T17:15:47.489909201+01:00"
     description: A Helm chart for Kubernetes
     digest: ae4467e518bd5a8a0af98ae25fb362f63000d7711c5575a9019430067ab780f8
     name: command-source-connector
@@ -227,7 +227,7 @@ entries:
     version: 0.5.1
   - apiVersion: v2
     appVersion: 2.0.0
-    created: "2023-10-02T17:15:29.376775099+02:00"
+    created: "2023-11-23T17:15:47.488717899+01:00"
     description: A Helm chart for Kubernetes
     digest: fad11813e3fdfbf8e76a289f80d451f2a2a362dc3379cea8cce2a458a9aaa6d8
     name: command-source-connector
@@ -237,7 +237,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 1.2.0
-    created: "2023-10-02T17:15:29.375669296+02:00"
+    created: "2023-11-23T17:15:47.487494498+01:00"
     description: A Helm chart for Kubernetes
     digest: f9ddff16e23f1abd00ed5172ae2f0fb099ffcacf003ff3ea02857f9b9b0ad355
     name: command-source-connector
@@ -247,7 +247,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 1.1.9
-    created: "2023-10-02T17:15:29.374723693+02:00"
+    created: "2023-11-23T17:15:47.486549597+01:00"
     description: A Helm chart for Kubernetes
     digest: 7d215b2705648fa2aa9e3db53bc88a8476ec0ef584f0c0672ef964c789e650fd
     name: command-source-connector
@@ -257,7 +257,7 @@ entries:
     version: 0.3.7
   - apiVersion: v2
     appVersion: 1.1.8
-    created: "2023-10-02T17:15:29.37381539+02:00"
+    created: "2023-11-23T17:15:47.485643296+01:00"
     description: A Helm chart for Kubernetes
     digest: 72e868cb07cdde1e5f0d097726fe142a3a2d3dc4d4399d29c47aee85af6064e8
     name: command-source-connector
@@ -267,7 +267,7 @@ entries:
     version: 0.3.6
   - apiVersion: v2
     appVersion: 1.1.7
-    created: "2023-10-02T17:15:29.372848387+02:00"
+    created: "2023-11-23T17:15:47.484585795+01:00"
     description: A Helm chart for Kubernetes
     digest: 34bf6f25542527835b81edbd523db2481fa17a4c6787fbcee2eb5249e83b6f89
     name: command-source-connector
@@ -277,7 +277,7 @@ entries:
     version: 0.3.5
   - apiVersion: v2
     appVersion: 1.1.6
-    created: "2023-10-02T17:15:29.371860584+02:00"
+    created: "2023-11-23T17:15:47.483530294+01:00"
     description: A Helm chart for Kubernetes
     digest: f2a85bb0e0e4c0ad5e9994e5eb98609c53f0952cfa466fd6ddda67f593a8784b
     name: command-source-connector
@@ -287,7 +287,7 @@ entries:
     version: 0.3.4
   - apiVersion: v2
     appVersion: 1.1.4
-    created: "2023-10-02T17:15:29.37034208+02:00"
+    created: "2023-11-23T17:15:47.482571193+01:00"
     description: A Helm chart for Kubernetes
     digest: 2110c594f85d145e16ea0b3f8c888a9d007597c1adf807ed11a3623cfce40cb7
     name: command-source-connector
@@ -297,7 +297,7 @@ entries:
     version: 0.3.2
   - apiVersion: v2
     appVersion: 1.1.3
-    created: "2023-10-02T17:15:29.368984576+02:00"
+    created: "2023-11-23T17:15:47.481221791+01:00"
     description: A Helm chart for Kubernetes
     digest: e46c644a8250da39b54517644937bb9ef7bd09479cdf076e0a71b85b9cb337d7
     name: command-source-connector
@@ -307,7 +307,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.1.2
-    created: "2023-10-02T17:15:29.368038773+02:00"
+    created: "2023-11-23T17:15:47.47963469+01:00"
     description: A Helm chart for Kubernetes
     digest: 762dc0eaf5bd1f0a525888320043d8dfcccfe29116247c6c55ff655734625785
     name: command-source-connector
@@ -317,7 +317,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.9.6
-    created: "2023-10-02T17:15:29.36708057+02:00"
+    created: "2023-11-23T17:15:47.478702589+01:00"
     description: A Helm chart for Kubernetes
     digest: e9e08025c9826e55946537930cd9dfbe93ae1c9e4d6aa6093d808332de2f00af
     name: command-source-connector
@@ -327,7 +327,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 0.9.5
-    created: "2023-10-02T17:15:29.366471768+02:00"
+    created: "2023-11-23T17:15:47.478071888+01:00"
     description: A Helm chart for Kubernetes
     digest: 2303223c6158d25a2213a71543cfdacd7319d9acae99020aa27e852a93d02a29
     name: command-source-connector
@@ -337,7 +337,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.9.3
-    created: "2023-10-02T17:15:29.365787666+02:00"
+    created: "2023-11-23T17:15:47.477247187+01:00"
     description: A Helm chart for Kubernetes
     digest: 838b9f04c9d013c144a70224a13fbd53a8730d6eaae6bc80443a211b335374f2
     name: command-source-connector
@@ -348,7 +348,7 @@ entries:
   evc-documentation-webapp:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2023-10-02T17:15:29.388103633+02:00"
+    created: "2023-11-23T17:15:47.502055913+01:00"
     description: A Helm chart for WiTCOM EVC documentation webapp
     digest: bf0ac7011f2bf8b925a0eda8003f0f54d1433e1a7b1933a81e006aeaa24d7b57
     name: evc-documentation-webapp
@@ -358,7 +358,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-02T17:15:29.38707193+02:00"
+    created: "2023-11-23T17:15:47.501466813+01:00"
     description: A Helm chart for WiTCOM EVC documentation webapp
     digest: 90cc5259db4db763422e56fdb3ff409d981e478d895641e9ddfceb3d71ac8903
     name: evc-documentation-webapp
@@ -369,7 +369,7 @@ entries:
   extranet-docs-docservice:
   - apiVersion: v2
     appVersion: 1.0.2
-    created: "2023-10-02T17:15:29.392074845+02:00"
+    created: "2023-11-23T17:15:47.506419318+01:00"
     description: Helm chart for WiTCOM extranet-docs-doc-service
     digest: c696732f725cf6c0f5f2b546c3f008555eeb030a61f01750b4d0f8a9f2c95c79
     name: extranet-docs-docservice
@@ -379,7 +379,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2023-10-02T17:15:29.391518843+02:00"
+    created: "2023-11-23T17:15:47.505862317+01:00"
     description: Helm chart for WiTCOM extranet-docs-doc-service
     digest: 3c6d45f1d9245f663659d787d6ff067b02aac2dae92e1169d04d9d2a20ca8566
     name: extranet-docs-docservice
@@ -389,7 +389,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-02T17:15:29.390970542+02:00"
+    created: "2023-11-23T17:15:47.505312317+01:00"
     description: Helm chart for WiTCOM extranet-docs-doc-service
     digest: 87fdcc0f61ab1f8ac983ee1fe681148564c67f2454852650977cb09485def646
     name: extranet-docs-docservice
@@ -399,7 +399,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 0.9.9
-    created: "2023-10-02T17:15:29.39036704+02:00"
+    created: "2023-11-23T17:15:47.504746916+01:00"
     description: Helm chart for WiTCOM extranet-docs-doc-service
     digest: 5fcb775e768ef2cbcdf01735db5748e62d68945d561f53afb3c9f29ce2d9012f
     name: extranet-docs-docservice
@@ -409,7 +409,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 0.9.8
-    created: "2023-10-02T17:15:29.389824838+02:00"
+    created: "2023-11-23T17:15:47.504219416+01:00"
     description: Helm chart for WiTCOM extranet-docs-doc-service
     digest: 7a5fe71c0301696f1e03a40c63195debce89d2ebb8fa777bf10c7562edd3c2dd
     name: extranet-docs-docservice
@@ -419,7 +419,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 0.9.6
-    created: "2023-10-02T17:15:29.389292137+02:00"
+    created: "2023-11-23T17:15:47.503345015+01:00"
     description: Helm chart for WiTCOM extranet-docs-doc-service
     digest: cac116d668cb4eca21bd06dad80cb5101c68d0ef636f1aaa733ccd96b7dabb06
     name: extranet-docs-docservice
@@ -429,7 +429,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: latest
-    created: "2023-10-02T17:15:29.388706235+02:00"
+    created: "2023-11-23T17:15:47.502640214+01:00"
     description: Helm chart for WiTCOM extranet-docs-doc-service
     digest: db2af64030bd3baa44803ebfdc7e0e7dce0fc96c26ebb7b3f70fe2329176dd10
     name: extranet-docs-docservice
@@ -440,7 +440,7 @@ entries:
   itsm-entity-processor:
   - apiVersion: v2
     appVersion: 0.9.0
-    created: "2023-10-02T17:15:29.392761747+02:00"
+    created: "2023-11-23T17:15:47.507191819+01:00"
     description: A Helm chart for deploying WiTCOM itsm-entity-processor on Kubernetes
     digest: 152756bf95e5886d4b9c248d160ba09d0e109fbdc781ca84a594d049a0b63d9d
     name: itsm-entity-processor
@@ -451,7 +451,7 @@ entries:
   itsm-opensearch-sink-connector:
   - apiVersion: v2
     appVersion: 0.3.0
-    created: "2023-10-02T17:15:29.395724756+02:00"
+    created: "2023-11-23T17:15:47.510540422+01:00"
     description: A Helm chart for Kubernetes
     digest: ba54d2804a9c4d9b91839d64f8021387262440ccb3d51a6b908e1b5247f62021
     name: itsm-opensearch-sink-connector
@@ -461,7 +461,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 0.2.1
-    created: "2023-10-02T17:15:29.394812753+02:00"
+    created: "2023-11-23T17:15:47.509454921+01:00"
     description: A Helm chart for Kubernetes
     digest: 3bf217f19221e2377299896496136027412623ad710cbc81eb2659478bf81d3d
     name: itsm-opensearch-sink-connector
@@ -471,7 +471,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 0.2.0
-    created: "2023-10-02T17:15:29.394098151+02:00"
+    created: "2023-11-23T17:15:47.508764121+01:00"
     description: A Helm chart for Kubernetes
     digest: b4f12ab30502bbaf7ba5b938d293cdf7563cb4572e3e27d09fbcabcfec128e23
     name: itsm-opensearch-sink-connector
@@ -481,7 +481,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-10-02T17:15:29.393434849+02:00"
+    created: "2023-11-23T17:15:47.50799602+01:00"
     description: A Helm chart for Kubernetes
     digest: c38b4608c25b52c6336cd8c19bf422527afa380b0a5e45c5fc34bd2482ee576b
     name: itsm-opensearch-sink-connector
@@ -492,7 +492,7 @@ entries:
   itsm-portal-api:
   - apiVersion: v2
     appVersion: 2.0.2
-    created: "2023-10-02T17:15:29.402922977+02:00"
+    created: "2023-11-23T17:15:47.51763203+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: 17d346d4e72f8d2a197a9d8097359a239d6304813f7562ad937e6ffa3fdfa596
     name: itsm-portal-api
@@ -502,7 +502,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.0.16
-    created: "2023-10-02T17:15:29.402334676+02:00"
+    created: "2023-11-23T17:15:47.517034029+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: c943b1c7b350924bb6d0c86004a9b7c344c77dc7e9eb323e681f37f316461e38
     name: itsm-portal-api
@@ -512,7 +512,7 @@ entries:
     version: 0.2.3
   - apiVersion: v2
     appVersion: 1.0.16
-    created: "2023-10-02T17:15:29.401697474+02:00"
+    created: "2023-11-23T17:15:47.516446629+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: 2c0a5ad028ebcf899c06f081768098a4ee51fbf3f3ac8c204e2ae739be638fbe
     name: itsm-portal-api
@@ -522,7 +522,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: 1.0.16
-    created: "2023-10-02T17:15:29.401110472+02:00"
+    created: "2023-11-23T17:15:47.515866228+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: 8ac013e471a0d5e0faf1ad8cfc713c2c840ac03eaa311cefc1504be34fc37717
     name: itsm-portal-api
@@ -532,7 +532,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.0.16
-    created: "2023-10-02T17:15:29.40040797+02:00"
+    created: "2023-11-23T17:15:47.515234527+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: 0d015e784809e54b121d84e9fc1ab46acadd7df95a6daf6de11af51a92e82563
     name: itsm-portal-api
@@ -542,7 +542,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.16
-    created: "2023-10-02T17:15:29.399808668+02:00"
+    created: "2023-11-23T17:15:47.514660627+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: 33c8ae4a4ed019ed82ce27a392f3410cdc2bd7dedc1d321ced05b66119477ff8
     name: itsm-portal-api
@@ -552,7 +552,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 1.0.15
-    created: "2023-10-02T17:15:29.399208266+02:00"
+    created: "2023-11-23T17:15:47.514064726+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: fe0a91e9fd56b44f8d234bba86cb4f7259b81b91bb5cc84a76159cf77eec8bf5
     name: itsm-portal-api
@@ -562,7 +562,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 1.0.14
-    created: "2023-10-02T17:15:29.398711965+02:00"
+    created: "2023-11-23T17:15:47.513526326+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: a2c1b5e1dd837fc65dfcefbff7cccbc4948783b60f4e576a6c60058a5c932e57
     name: itsm-portal-api
@@ -572,7 +572,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.0.13
-    created: "2023-10-02T17:15:29.398196563+02:00"
+    created: "2023-11-23T17:15:47.513000625+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: 08b6df4fc24623c0744ab314a92d15d68a60143614c01fe470c1044f00a83651
     name: itsm-portal-api
@@ -582,7 +582,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.0.12
-    created: "2023-10-02T17:15:29.397685762+02:00"
+    created: "2023-11-23T17:15:47.512442924+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: 9dd16e1b317fdf5fa0241dbb30beb7a6e17f46eebe5331f91435a35e044c3ec9
     name: itsm-portal-api
@@ -592,7 +592,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.0.11
-    created: "2023-10-02T17:15:29.39711386+02:00"
+    created: "2023-11-23T17:15:47.511876024+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: 90beb81f2946567f66e6fe9c5d652a294db8a89ef7ff1fe929227679ee2763ff
     name: itsm-portal-api
@@ -602,7 +602,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.0.10
-    created: "2023-10-02T17:15:29.396549158+02:00"
+    created: "2023-11-23T17:15:47.511279223+01:00"
     description: Helm-Chart fuer die WiTCOM Portal-API
     digest: f4833a6d0c2d6eb6f869e0837b3f0d943a0b1f0316b4c0ce89cf66008f2b990f
     name: itsm-portal-api
@@ -613,7 +613,7 @@ entries:
   itsm-portal-webapp:
   - apiVersion: v2
     appVersion: 2.0.3
-    created: "2023-10-02T17:15:29.4104212+02:00"
+    created: "2023-11-23T17:15:47.525813039+01:00"
     description: A Helm chart for Kubernetes
     digest: bd664b9d37f420b72b1eab3a8631e7f7d004c365af836d07f3dfc2d616e2f155
     name: itsm-portal-webapp
@@ -623,7 +623,7 @@ entries:
     version: 2.0.3
   - apiVersion: v2
     appVersion: 2.0.2
-    created: "2023-10-02T17:15:29.410014599+02:00"
+    created: "2023-11-23T17:15:47.525210438+01:00"
     description: A Helm chart for Kubernetes
     digest: fbaf2a0b0817747db5f0cbddb0d741765192d4687f003b189296ec1e82202ad7
     name: itsm-portal-webapp
@@ -633,7 +633,7 @@ entries:
     version: 2.0.2
   - apiVersion: v2
     appVersion: 1.1.8-fixed
-    created: "2023-10-02T17:15:29.409419197+02:00"
+    created: "2023-11-23T17:15:47.524652737+01:00"
     description: A Helm chart for Kubernetes
     digest: a9e8620631628966963a2d90e15daedcfba2e327d6204d35b29a391356004ddb
     name: itsm-portal-webapp
@@ -643,7 +643,7 @@ entries:
     version: 0.3.3
   - apiVersion: v2
     appVersion: 1.1.8-fixed
-    created: "2023-10-02T17:15:29.408870195+02:00"
+    created: "2023-11-23T17:15:47.524078437+01:00"
     description: A Helm chart for Kubernetes
     digest: 0ad70e2df3f26db1ba0acef41779da86b20a33443685c10992bf77c61d78fd42
     name: itsm-portal-webapp
@@ -653,7 +653,7 @@ entries:
     version: 0.3.2
   - apiVersion: v2
     appVersion: 1.1.8-fixed
-    created: "2023-10-02T17:15:29.408301194+02:00"
+    created: "2023-11-23T17:15:47.523498836+01:00"
     description: A Helm chart for Kubernetes
     digest: 8acc41349fd9671f306d3d6db45271e4123bc4a7997fa56a369d6cbc469e33f9
     name: itsm-portal-webapp
@@ -663,7 +663,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.1.8-fixed
-    created: "2023-10-02T17:15:29.407757892+02:00"
+    created: "2023-11-23T17:15:47.522946636+01:00"
     description: A Helm chart for Kubernetes
     digest: 2437184f9d8fe55e83a01d1f0aa88c86ea7e59e9fe099b517726723feea50eec
     name: itsm-portal-webapp
@@ -673,7 +673,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.1.8-fixed
-    created: "2023-10-02T17:15:29.40720819+02:00"
+    created: "2023-11-23T17:15:47.522378835+01:00"
     description: A Helm chart for Kubernetes
     digest: 56a898024f651ee8e5ba7aae52e6ba4b0484c4b21c6c551dbfcf94dfc7fe6163
     name: itsm-portal-webapp
@@ -683,7 +683,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.1.8
-    created: "2023-10-02T17:15:29.406666289+02:00"
+    created: "2023-11-23T17:15:47.521807534+01:00"
     description: A Helm chart for Kubernetes
     digest: a33e74a7b0897505e2c0dbadb92bee62eb9ec250e228afa3f011a48da012ac26
     name: itsm-portal-webapp
@@ -693,7 +693,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.1.7
-    created: "2023-10-02T17:15:29.406194887+02:00"
+    created: "2023-11-23T17:15:47.521298234+01:00"
     description: A Helm chart for Kubernetes
     digest: e36bce3e562742d73253417a669a6c57c34f6a73cb9f9f850f9d3114a57711f7
     name: itsm-portal-webapp
@@ -703,7 +703,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.1.6
-    created: "2023-10-02T17:15:29.405725086+02:00"
+    created: "2023-11-23T17:15:47.520787233+01:00"
     description: A Helm chart for Kubernetes
     digest: 97f2774a5513592a39001f61d67d10322456495edb43ec337d041ae6015011ae
     name: itsm-portal-webapp
@@ -713,7 +713,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: 1.1.5
-    created: "2023-10-02T17:15:29.405244384+02:00"
+    created: "2023-11-23T17:15:47.519975332+01:00"
     description: A Helm chart for Kubernetes
     digest: 2837214a65862a13a75b6729a3b86f3a6a181fc93da811233fb4ef0d63878dcb
     name: itsm-portal-webapp
@@ -723,7 +723,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.1.4
-    created: "2023-10-02T17:15:29.404009181+02:00"
+    created: "2023-11-23T17:15:47.519194932+01:00"
     description: A Helm chart for Kubernetes
     digest: b0fe93ca95cea58f4bf4653293111b28f23a2a8143df636cc2db422fb5e1cdbf
     name: itsm-portal-webapp
@@ -733,7 +733,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 1.1.3
-    created: "2023-10-02T17:15:29.403468679+02:00"
+    created: "2023-11-23T17:15:47.518156431+01:00"
     description: A Helm chart for Kubernetes
     digest: b8a120c21906180c48e147a3627090fa35c2ccef83c43afc01d0aa8df6edd084
     name: itsm-portal-webapp
@@ -744,7 +744,7 @@ entries:
   kafka-connect-ui:
   - apiVersion: v2
     appVersion: 0.9.7
-    created: "2023-10-02T17:15:29.411125002+02:00"
+    created: "2023-11-23T17:15:47.526399739+01:00"
     description: A Helm chart for Kubernetes
     digest: d039a344793078543e569a86f2357d06af9e12ae3ac78769803ccdfa1a7163a6
     name: kafka-connect-ui
@@ -755,7 +755,7 @@ entries:
   mrtg-backend:
   - apiVersion: v2
     appVersion: 1.1.0
-    created: "2023-10-02T17:15:29.419029326+02:00"
+    created: "2023-11-23T17:15:47.535222249+01:00"
     description: A Helm chart for Kubernetes
     digest: a609397f56285a0573dd027cd4e7af7b80ff3283ea4ee700018ad775dc10a102
     name: mrtg-backend
@@ -765,7 +765,7 @@ entries:
     version: 0.7.0
   - apiVersion: v2
     appVersion: 1.0.4
-    created: "2023-10-02T17:15:29.418214723+02:00"
+    created: "2023-11-23T17:15:47.534302848+01:00"
     description: A Helm chart for Kubernetes
     digest: 18ff0786461d1adfb86f15da088f7bfd5d476a671b2380ec923d5227c4556033
     name: mrtg-backend
@@ -775,7 +775,7 @@ entries:
     version: 0.6.3
   - apiVersion: v2
     appVersion: 1.0.4
-    created: "2023-10-02T17:15:29.417362821+02:00"
+    created: "2023-11-23T17:15:47.533390447+01:00"
     description: A Helm chart for Kubernetes
     digest: efa246b396add1e6893e878db210c3a055b03a55d54f754853942f5a1e17f440
     name: mrtg-backend
@@ -785,7 +785,7 @@ entries:
     version: 0.6.2
   - apiVersion: v2
     appVersion: 1.0.4
-    created: "2023-10-02T17:15:29.416528218+02:00"
+    created: "2023-11-23T17:15:47.532526146+01:00"
     description: A Helm chart for Kubernetes
     digest: b19efc99d237f34459b8edf86854f088ca1a77328db56d50bbc0fa2a5d68f7c8
     name: mrtg-backend
@@ -795,7 +795,7 @@ entries:
     version: 0.6.1
   - apiVersion: v2
     appVersion: 1.0.4
-    created: "2023-10-02T17:15:29.415753816+02:00"
+    created: "2023-11-23T17:15:47.531605545+01:00"
     description: A Helm chart for Kubernetes
     digest: 8a458bc1ac61f42f9a3fe956f819200272399f3ec846a128934f7f91f7af460c
     name: mrtg-backend
@@ -805,7 +805,7 @@ entries:
     version: 0.6.0
   - apiVersion: v2
     appVersion: 1.0.4
-    created: "2023-10-02T17:15:29.414924314+02:00"
+    created: "2023-11-23T17:15:47.530683644+01:00"
     description: A Helm chart for Kubernetes
     digest: b714db2fba04e85ec99ea49bd3d12968ea32b25b990e2771d4e4e06ce665324f
     name: mrtg-backend
@@ -815,7 +815,7 @@ entries:
     version: 0.5.1
   - apiVersion: v2
     appVersion: 1.0.4
-    created: "2023-10-02T17:15:29.414079511+02:00"
+    created: "2023-11-23T17:15:47.528622442+01:00"
     description: A Helm chart for Kubernetes
     digest: 6aabe9a0726473bfe5d5aa3b55b354156a9a8ed83f65f4fcde42116c22037f34
     name: mrtg-backend
@@ -825,7 +825,7 @@ entries:
     version: 0.5.0
   - apiVersion: v2
     appVersion: 1.0.4
-    created: "2023-10-02T17:15:29.412569606+02:00"
+    created: "2023-11-23T17:15:47.527904741+01:00"
     description: A Helm chart for Kubernetes
     digest: 0247020ea89c4a33dc09a34148fcf8f7c6c863a75009b975d30ddd8f4d503682
     name: mrtg-backend
@@ -835,7 +835,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 1.0.3
-    created: "2023-10-02T17:15:29.411846104+02:00"
+    created: "2023-11-23T17:15:47.52714464+01:00"
     description: A Helm chart for Kubernetes
     digest: b2de6c505a7cb558c03253af01064c87eaffcf29724b7cedce865620ffe38b08
     name: mrtg-backend
@@ -846,7 +846,7 @@ entries:
   noc-api:
   - apiVersion: v2
     appVersion: 0.9.0
-    created: "2023-10-02T17:15:29.419620128+02:00"
+    created: "2023-11-23T17:15:47.535808349+01:00"
     description: Helm chart for NOC-Api microservice
     digest: d2f8ffb555520986b219331418e70966296809f846954639f3734cbb3dbf4745
     name: noc-api
@@ -857,7 +857,7 @@ entries:
   noc-sink-connector:
   - apiVersion: v2
     appVersion: 0.2.2
-    created: "2023-10-02T17:15:29.423951741+02:00"
+    created: "2023-11-23T17:15:47.540631054+01:00"
     description: A Helm chart for Kubernetes
     digest: 33a0898c3c75271257e644d8eb99f185749e735a67d59d63c9d1424a06298d06
     name: noc-sink-connector
@@ -867,7 +867,7 @@ entries:
     version: 0.4.2
   - apiVersion: v2
     appVersion: 0.1.2
-    created: "2023-10-02T17:15:29.423260939+02:00"
+    created: "2023-11-23T17:15:47.539918954+01:00"
     description: A Helm chart for Kubernetes
     digest: 008fcf755f5345fa5820c69cd47399ff6ac7b04eec708da5e2b647f50af2b62c
     name: noc-sink-connector
@@ -877,7 +877,7 @@ entries:
     version: 0.3.6
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-10-02T17:15:29.422481236+02:00"
+    created: "2023-11-23T17:15:47.538685152+01:00"
     description: A Helm chart for Kubernetes
     digest: fd29bc927b211098bd34360c36ed94c19a5f11fb13a2425cfef480d3df3e02df
     name: noc-sink-connector
@@ -887,7 +887,7 @@ entries:
     version: 0.3.5
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-10-02T17:15:29.421564033+02:00"
+    created: "2023-11-23T17:15:47.537992252+01:00"
     description: A Helm chart for Kubernetes
     digest: 8e47726658b63db069a0db3ec957b263152689079d0b16ca10ec948e6e53dd00
     name: noc-sink-connector
@@ -897,7 +897,7 @@ entries:
     version: 0.3.4
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2023-10-02T17:15:29.420882731+02:00"
+    created: "2023-11-23T17:15:47.537283151+01:00"
     description: A Helm chart for Kubernetes
     digest: 928d3fe472eb354486e4dd4820fef4ba78ee54f3d0df8feffabfbd9112a2ecf3
     name: noc-sink-connector
@@ -907,7 +907,7 @@ entries:
     version: 0.3.3
   - apiVersion: v2
     appVersion: 0.0.4
-    created: "2023-10-02T17:15:29.420236729+02:00"
+    created: "2023-11-23T17:15:47.53653925+01:00"
     description: A Helm chart for Kubernetes
     digest: eff2c5f5ef31e2c683ce0acab8711dc42dfe1d74cc0e117517750e3ee1ddb194
     name: noc-sink-connector
@@ -918,7 +918,7 @@ entries:
   opendistro-es:
   - apiVersion: v1
     appVersion: 1.13.3
-    created: "2023-10-02T17:15:29.426588949+02:00"
+    created: "2023-11-23T17:15:47.543455757+01:00"
     description: Open Distro for Elasticsearch
     digest: 2f70753d87c05c5e4962c7983f3a8bc05c86ef537cdb5d97427e06a0df463338
     kubeVersion: ^1.10.0-0
@@ -935,7 +935,7 @@ entries:
     version: 1.13.3
   - apiVersion: v1
     appVersion: 1.12.0
-    created: "2023-10-02T17:15:29.425293045+02:00"
+    created: "2023-11-23T17:15:47.542067456+01:00"
     description: Open Distro for Elasticsearch
     digest: 838aeb1c2f1e88df2758b011f904747f215033b25cbc0f73a5cdc053f582521b
     kubeVersion: ^1.10.0-0
@@ -953,7 +953,7 @@ entries:
   powerdns-pdns:
   - apiVersion: v2
     appVersion: 4.6.3
-    created: "2023-10-02T17:15:29.433081768+02:00"
+    created: "2023-11-23T17:15:47.551793066+01:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -975,7 +975,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 4.6.3
-    created: "2023-10-02T17:15:29.431587264+02:00"
+    created: "2023-11-23T17:15:47.549836164+01:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -997,7 +997,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 4.6.3
-    created: "2023-10-02T17:15:29.429917659+02:00"
+    created: "2023-11-23T17:15:47.546934361+01:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -1019,7 +1019,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 4.6.3
-    created: "2023-10-02T17:15:29.428149053+02:00"
+    created: "2023-11-23T17:15:47.545024459+01:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -1051,7 +1051,7 @@ entries:
           image: ngoduykhanh/powerdns-admin:v0.2.4
     apiVersion: v2
     appVersion: v0.2.4
-    created: "2023-10-02T17:15:29.435448375+02:00"
+    created: "2023-11-23T17:15:47.554566169+01:00"
     description: A PowerDNS web interface with advanced features.
     digest: 17155e51369f8cf0894be741de1742c64058c428aad4da6bc3d7cf2ab2d363f6
     maintainers:
@@ -1075,7 +1075,7 @@ entries:
           image: ngoduykhanh/powerdns-admin:v0.2.4
     apiVersion: v2
     appVersion: v0.2.4
-    created: "2023-10-02T17:15:29.434851973+02:00"
+    created: "2023-11-23T17:15:47.553922568+01:00"
     description: A PowerDNS web interface with advanced features.
     digest: 110b97ba68021e26c2ec119e500c242ec42a2b928461d619e0f4068e9546b28a
     maintainers:
@@ -1099,7 +1099,7 @@ entries:
           image: ngoduykhanh/powerdns-admin:0.2.3
     apiVersion: v2
     appVersion: 0.2.3
-    created: "2023-10-02T17:15:29.434242572+02:00"
+    created: "2023-11-23T17:15:47.553218268+01:00"
     description: A PowerDNS web interface with advanced features.
     digest: 2f43fa92a09ca62d2651067cdd1336b7350f80f6ac1d36ce3d81f2d692d48878
     maintainers:
@@ -1114,7 +1114,7 @@ entries:
     version: 0.3.2
   - apiVersion: v1
     appVersion: 0.2.4
-    created: "2023-10-02T17:15:29.43361137+02:00"
+    created: "2023-11-23T17:15:47.552473167+01:00"
     description: A PowerDNS web interface with advanced features.
     digest: dd589957e74d116bcd198c558668d91cc8110ee7aace149bfaada431dc8cff47
     maintainers:
@@ -1129,7 +1129,7 @@ entries:
   prometheus-ci-metadata-exporter:
   - apiVersion: v2
     appVersion: 0.3.1
-    created: "2023-10-02T17:15:29.441343393+02:00"
+    created: "2023-11-23T17:15:47.561141576+01:00"
     description: A Helm chart for Kubernetes
     digest: 352b2420538bf5b9299b1877450287aca852f4610b7da63633a0907d3476263f
     name: prometheus-ci-metadata-exporter
@@ -1139,7 +1139,7 @@ entries:
     version: 0.2.4
   - apiVersion: v2
     appVersion: 0.3.0
-    created: "2023-10-02T17:15:29.440577391+02:00"
+    created: "2023-11-23T17:15:47.560438975+01:00"
     description: A Helm chart for Kubernetes
     digest: 9cef67e743819641777595ee5422b88fd0176e4b8677a1e10530c0b2dcb01983
     name: prometheus-ci-metadata-exporter
@@ -1149,7 +1149,7 @@ entries:
     version: 0.2.3
   - apiVersion: v2
     appVersion: 0.2.0
-    created: "2023-10-02T17:15:29.439950689+02:00"
+    created: "2023-11-23T17:15:47.559783375+01:00"
     description: A Helm chart for Kubernetes
     digest: a99fba796e713f5ab95a7dd024ff65e33cf13b2096e8662dcf2ae2ab64ea8091
     name: prometheus-ci-metadata-exporter
@@ -1159,7 +1159,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: 0.3.0
-    created: "2023-10-02T17:15:29.439192986+02:00"
+    created: "2023-11-23T17:15:47.558305473+01:00"
     description: A Helm chart for Kubernetes
     digest: bc90825e380aea8a63a2076f21522876b29bd1f8b1e3abfd50444a54b4ade4b9
     name: prometheus-ci-metadata-exporter
@@ -1169,7 +1169,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 0.2.0
-    created: "2023-10-02T17:15:29.437905583+02:00"
+    created: "2023-11-23T17:15:47.557613972+01:00"
     description: A Helm chart for Kubernetes
     digest: 401e01fab481955643b7ccc76db321f186f109ccda3f9fd52a705e4e0665d088
     name: prometheus-ci-metadata-exporter
@@ -1179,7 +1179,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.1.5
-    created: "2023-10-02T17:15:29.437277781+02:00"
+    created: "2023-11-23T17:15:47.556799271+01:00"
     description: A Helm chart for Kubernetes
     digest: 8faa2bb2a3b5da2cab3943b9fdee18e1fdbea7386a72db481b58ab7a9321bda6
     name: prometheus-ci-metadata-exporter
@@ -1189,7 +1189,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: 0.1.4
-    created: "2023-10-02T17:15:29.436698579+02:00"
+    created: "2023-11-23T17:15:47.555971571+01:00"
     description: A Helm chart for Kubernetes
     digest: 998074b3c4c4e777f4eee7cadf4a0d46e2e02da5fb6da07aeba036af74521790
     name: prometheus-ci-metadata-exporter
@@ -1199,7 +1199,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 0.1.3
-    created: "2023-10-02T17:15:29.436052077+02:00"
+    created: "2023-11-23T17:15:47.55525177+01:00"
     description: A Helm chart for Kubernetes
     digest: 9622ee4eb5158a3c4cd4d87ac50f078e781ad7d7d3b4d238f001b0ce01a69dff
     name: prometheus-ci-metadata-exporter
@@ -1210,7 +1210,7 @@ entries:
   prometheus-json-exporter:
   - apiVersion: v2
     appVersion: latest
-    created: "2023-10-02T17:15:29.442459996+02:00"
+    created: "2023-11-23T17:15:47.562440277+01:00"
     description: A Helm chart for Kubernetes
     digest: d1b27bb8b2ddfd1d99571fdb821b2092b19e04c2133fd3a113e3ab9b2b456e8b
     name: prometheus-json-exporter
@@ -1220,7 +1220,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: latest
-    created: "2023-10-02T17:15:29.441908195+02:00"
+    created: "2023-11-23T17:15:47.561768577+01:00"
     description: A Helm chart for Kubernetes
     digest: 0c44073a5d78447dfa9ef0f3bacd88f02c9ce7a472bc70202f7d0ba17a746ebd
     name: prometheus-json-exporter
@@ -1231,7 +1231,7 @@ entries:
   suo-cloud-source-connector:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.461851054+02:00"
+    created: "2023-11-23T17:15:47.584652901+01:00"
     description: A Helm chart for Kubernetes
     digest: eff5f4b234ae95b5ba8a867ab23d6df704e9172872f881b19e1fb7432f0b4e5e
     name: suo-cloud-source-connector
@@ -1241,7 +1241,7 @@ entries:
     version: 0.3.5
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.460592151+02:00"
+    created: "2023-11-23T17:15:47.5837308+01:00"
     description: A Helm chart for Kubernetes
     digest: 6e06fe2eff534187fa66ae94f657ef667bdd976080c45eaf3daf8164e49183e0
     name: suo-cloud-source-connector
@@ -1251,7 +1251,7 @@ entries:
     version: 0.3.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.459449647+02:00"
+    created: "2023-11-23T17:15:47.582783099+01:00"
     description: A Helm chart for Kubernetes
     digest: 1b85604906ae9a018a87dfcc421eb791fb9c301ac6bb0050d2a5bf4d9651f9ce
     name: suo-cloud-source-connector
@@ -1261,7 +1261,7 @@ entries:
     version: 0.3.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.458481044+02:00"
+    created: "2023-11-23T17:15:47.581820298+01:00"
     description: A Helm chart for Kubernetes
     digest: 9fbb2f78b054c18c34f6a0ec67fc2ab79dae90e1adb2f83f152588443889850d
     name: suo-cloud-source-connector
@@ -1271,7 +1271,7 @@ entries:
     version: 0.3.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.45036332+02:00"
+    created: "2023-11-23T17:15:47.571723487+01:00"
     description: A Helm chart for Kubernetes
     digest: 902c4c207a1db883000bcffac46d92a2a006689f98ca965d7d6a00dab7ab8c8b
     name: suo-cloud-source-connector
@@ -1281,7 +1281,7 @@ entries:
     version: 0.2.10
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.457481241+02:00"
+    created: "2023-11-23T17:15:47.578168094+01:00"
     description: A Helm chart for Kubernetes
     digest: ac414d49dd213f411b6aac997d41bbaf6ba2eb15c3b662bb10b047714d1274d2
     name: suo-cloud-source-connector
@@ -1291,7 +1291,7 @@ entries:
     version: 0.2.9
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.455894537+02:00"
+    created: "2023-11-23T17:15:47.577235993+01:00"
     description: A Helm chart for Kubernetes
     digest: 8d422d8d6c31bef862472cbf6752312ca4c972f299c5cff103918e3c83cedb66
     name: suo-cloud-source-connector
@@ -1301,7 +1301,7 @@ entries:
     version: 0.2.8
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.454971734+02:00"
+    created: "2023-11-23T17:15:47.576220992+01:00"
     description: A Helm chart for Kubernetes
     digest: 26d310904dee22ad99216fd038ac13042b2b8513efcb0be0b3c065a9b19ffa26
     name: suo-cloud-source-connector
@@ -1311,7 +1311,7 @@ entries:
     version: 0.2.7
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.454067031+02:00"
+    created: "2023-11-23T17:15:47.575236191+01:00"
     description: A Helm chart for Kubernetes
     digest: 50153d1ab52976b08ea8935ccf217457e831ea4423403629fe3f06687c6c976c
     name: suo-cloud-source-connector
@@ -1321,7 +1321,7 @@ entries:
     version: 0.2.6
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.453168828+02:00"
+    created: "2023-11-23T17:15:47.57433939+01:00"
     description: A Helm chart for Kubernetes
     digest: a647c2d2bb5fdc5129302d04f0eb865dd4f8dcd85e9823a9b6cee4d295349298
     name: suo-cloud-source-connector
@@ -1331,7 +1331,7 @@ entries:
     version: 0.2.4
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.452237326+02:00"
+    created: "2023-11-23T17:15:47.573475689+01:00"
     description: A Helm chart for Kubernetes
     digest: 26bfe2b6c7ea2c6f25e48478e9e97051e4426305b85896cc7850240f190c2d0a
     name: suo-cloud-source-connector
@@ -1341,7 +1341,7 @@ entries:
     version: 0.2.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.451336223+02:00"
+    created: "2023-11-23T17:15:47.572605688+01:00"
     description: A Helm chart for Kubernetes
     digest: 32246579fd0c70b6b6f04c80d870f71c43336a92a788fd31a51d4dc6fce2624f
     name: suo-cloud-source-connector
@@ -1351,7 +1351,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.449458717+02:00"
+    created: "2023-11-23T17:15:47.570392386+01:00"
     description: A Helm chart for Kubernetes
     digest: b5d8e46c9b75984e22a2da6982f557ff141e64f1de9ac844ec14474ee313ac28
     name: suo-cloud-source-connector
@@ -1361,7 +1361,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.448564615+02:00"
+    created: "2023-11-23T17:15:47.568506084+01:00"
     description: A Helm chart for Kubernetes
     digest: bcd36e345e99f4d128bec6003734c07224c38babb337d143b2cc3903d990768a
     name: suo-cloud-source-connector
@@ -1371,7 +1371,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.44714891+02:00"
+    created: "2023-11-23T17:15:47.567504983+01:00"
     description: A Helm chart for Kubernetes
     digest: 240663f8e6b68a4a650d9757d89044103de85ec2947c73db258f4241b4e8b559
     name: suo-cloud-source-connector
@@ -1381,7 +1381,7 @@ entries:
     version: 0.1.9
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.446195207+02:00"
+    created: "2023-11-23T17:15:47.566538282+01:00"
     description: A Helm chart for Kubernetes
     digest: 72ec0144c0191555ed64bdeb19b373feafb04fead4ac4dd504704f070b18426a
     name: suo-cloud-source-connector
@@ -1391,7 +1391,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.445253205+02:00"
+    created: "2023-11-23T17:15:47.565575981+01:00"
     description: A Helm chart for Kubernetes
     digest: 8903f63208f7744bd384dfa486fbc5dd8d8b59b6ed957d6da138bca7e3c76a38
     name: suo-cloud-source-connector
@@ -1401,7 +1401,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.444286602+02:00"
+    created: "2023-11-23T17:15:47.56451578+01:00"
     description: A Helm chart for Kubernetes
     digest: 8469e079f703aea05475c809f3e529e8fc4e64313c6fcec0a1fcacd6ee9a21b2
     name: suo-cloud-source-connector
@@ -1411,7 +1411,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-02T17:15:29.443392199+02:00"
+    created: "2023-11-23T17:15:47.563494179+01:00"
     description: A Helm chart for Kubernetes
     digest: 2066e15d36baa23aafa7287e7cd2be5660b160567e1c0e33514291f1a6cf8382
     name: suo-cloud-source-connector
@@ -1422,7 +1422,7 @@ entries:
   vaultwarden:
   - apiVersion: v2
     appVersion: 1.25.2
-    created: "2023-10-02T17:15:29.462644057+02:00"
+    created: "2023-11-23T17:15:47.585416602+01:00"
     description: A Helm chart for vaultwarden
     digest: 77fb1cf74ea39169a996309f1b72464b26a09ad619c58c66b1aef24b5d99d50d
     name: vaultwarden
@@ -1433,7 +1433,7 @@ entries:
   vmware-exporter:
   - apiVersion: v2
     appVersion: 0.18.4
-    created: "2023-10-02T17:15:29.463258259+02:00"
+    created: "2023-11-23T17:15:47.586053902+01:00"
     description: A Helm chart for vmware_exporter (https://github.com/pryorda/vmware_exporter)
     digest: 7ffaf89fc24b68afed0dbd3f7cc55cdea16f2a572d9bffd7a616fefd622c85e3
     name: vmware-exporter
@@ -1444,7 +1444,7 @@ entries:
   witcom-api-gateway:
   - apiVersion: v2
     appVersion: 2.2.2
-    created: "2023-10-02T17:15:29.472667787+02:00"
+    created: "2023-11-23T17:15:47.594880912+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 1ab143c6b434d5f799dcfd61f98032815ef7838186239bd82ce3b410e910c5bb
     name: witcom-api-gateway
@@ -1454,7 +1454,7 @@ entries:
     version: 2.2.2
   - apiVersion: v2
     appVersion: 2.2.1
-    created: "2023-10-02T17:15:29.472033285+02:00"
+    created: "2023-11-23T17:15:47.594286311+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 93b60985968520e2c9f967d75ac6626047d286d879f9e1bf13e5e9b4caf4fbb2
     name: witcom-api-gateway
@@ -1464,7 +1464,7 @@ entries:
     version: 2.2.1
   - apiVersion: v2
     appVersion: 2.2.0
-    created: "2023-10-02T17:15:29.471384583+02:00"
+    created: "2023-11-23T17:15:47.593703011+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 31185a2d6da38dd87c02906f7366d08fe2d09ae24b3ebf423347914a06a557c6
     name: witcom-api-gateway
@@ -1474,7 +1474,7 @@ entries:
     version: 2.2.0
   - apiVersion: v2
     appVersion: 2.0.0
-    created: "2023-10-02T17:15:29.470681181+02:00"
+    created: "2023-11-23T17:15:47.59296761+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 149916d9af45e5c6657640f19176321907ccd27daf298eff1443f9a99e078ef9
     name: witcom-api-gateway
@@ -1484,7 +1484,7 @@ entries:
     version: 2.0.0
   - apiVersion: v2
     appVersion: 1.5.1
-    created: "2023-10-02T17:15:29.470074479+02:00"
+    created: "2023-11-23T17:15:47.592367709+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 96ff7cbbdf1df0078c2ce8a93881f755b1b2ff8207da07e603187961f504fc71
     name: witcom-api-gateway
@@ -1494,7 +1494,7 @@ entries:
     version: 1.5.1
   - apiVersion: v2
     appVersion: 1.4.2
-    created: "2023-10-02T17:15:29.469504577+02:00"
+    created: "2023-11-23T17:15:47.591804108+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 55178d8410d0a646919bf497a66285c8fafa84e0c5f9d1dd3ec731a61341ffe2
     name: witcom-api-gateway
@@ -1504,7 +1504,7 @@ entries:
     version: 0.4.3
   - apiVersion: v2
     appVersion: 1.4.1
-    created: "2023-10-02T17:15:29.468912376+02:00"
+    created: "2023-11-23T17:15:47.591195008+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 05f8eed72d2c52567020bf4f1689ad47d274cd47e875b6acd3229abddcf59142
     name: witcom-api-gateway
@@ -1514,7 +1514,7 @@ entries:
     version: 0.4.2
   - apiVersion: v2
     appVersion: 1.4.0
-    created: "2023-10-02T17:15:29.468157073+02:00"
+    created: "2023-11-23T17:15:47.590599807+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 057a67173b1960e75a3fea182e3e856252eb2f6713788724365c215e50ba61e1
     name: witcom-api-gateway
@@ -1524,7 +1524,7 @@ entries:
     version: 0.4.1
   - apiVersion: v2
     appVersion: 1.3.1
-    created: "2023-10-02T17:15:29.467540572+02:00"
+    created: "2023-11-23T17:15:47.589435806+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 73d1943b581224d97b71f233ef34572f2af9011d9f191a5bea3e2d247461114e
     name: witcom-api-gateway
@@ -1534,7 +1534,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.3.0
-    created: "2023-10-02T17:15:29.46692757+02:00"
+    created: "2023-11-23T17:15:47.588879605+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 5e7bc8dc0870242819b45b183195a2055835a7f25955f0b832794aa8ac372288
     name: witcom-api-gateway
@@ -1544,7 +1544,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: 1.2.1
-    created: "2023-10-02T17:15:29.466306368+02:00"
+    created: "2023-11-23T17:15:47.588313405+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: f589e92eb1770a7ec46124b9d215906b9ca18ba42117c949d877a964b57c8ea3
     name: witcom-api-gateway
@@ -1554,7 +1554,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: 1.2.0
-    created: "2023-10-02T17:15:29.465154264+02:00"
+    created: "2023-11-23T17:15:47.587819904+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: e160fc2961d8be7ee3fb5f3b9b6f7d23affbdece8f6155a957a909f3c14f9969
     name: witcom-api-gateway
@@ -1564,7 +1564,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-02T17:15:29.464558463+02:00"
+    created: "2023-11-23T17:15:47.587245204+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 57192ab0e96907122df1c6d899d1314ef72ea5e562a13ed7fec03be4ddedcbbc
     name: witcom-api-gateway
@@ -1574,7 +1574,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-02T17:15:29.463921461+02:00"
+    created: "2023-11-23T17:15:47.586671403+01:00"
     description: A Helm chart for witcom-api-gateway
     digest: 6c414046e32504c671b184e1306b809b41b37ffd46d82f4cf4e4f51d4245e3d5
     name: witcom-api-gateway
@@ -1585,7 +1585,7 @@ entries:
   witcom-id-generator:
   - apiVersion: v2
     appVersion: v1.0.9
-    created: "2023-10-02T17:15:29.504512983+02:00"
+    created: "2023-11-23T17:15:47.627950447+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -1600,7 +1600,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 1.0.7
-    created: "2023-10-02T17:15:29.501668074+02:00"
+    created: "2023-11-23T17:15:47.624752943+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -1615,7 +1615,7 @@ entries:
     version: 1.0.0
   - apiVersion: v2
     appVersion: 1.0.7
-    created: "2023-10-02T17:15:29.498770065+02:00"
+    created: "2023-11-23T17:15:47.62116754+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -1630,7 +1630,7 @@ entries:
     version: 0.4.2
   - apiVersion: v2
     appVersion: 1.0.7
-    created: "2023-10-02T17:15:29.494937754+02:00"
+    created: "2023-11-23T17:15:47.617999636+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -1645,7 +1645,7 @@ entries:
     version: 0.4.1
   - apiVersion: v2
     appVersion: 1.0.7
-    created: "2023-10-02T17:15:29.491857345+02:00"
+    created: "2023-11-23T17:15:47.614942133+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -1660,7 +1660,7 @@ entries:
     version: 0.4.0
   - apiVersion: v2
     appVersion: 1.0.7
-    created: "2023-10-02T17:15:29.488341734+02:00"
+    created: "2023-11-23T17:15:47.611070029+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -1675,7 +1675,7 @@ entries:
     version: 0.3.4
   - apiVersion: v2
     appVersion: 1.0.6
-    created: "2023-10-02T17:15:29.485422725+02:00"
+    created: "2023-11-23T17:15:47.608108426+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -1690,7 +1690,7 @@ entries:
     version: 0.3.3
   - apiVersion: v2
     appVersion: 1.0.4
-    created: "2023-10-02T17:15:29.481980715+02:00"
+    created: "2023-11-23T17:15:47.604364722+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -1705,7 +1705,7 @@ entries:
     version: 0.3.2
   - apiVersion: v2
     appVersion: 1.0.1
-    created: "2023-10-02T17:15:29.478949706+02:00"
+    created: "2023-11-23T17:15:47.601367719+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -1720,7 +1720,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-10-02T17:15:29.476065997+02:00"
+    created: "2023-11-23T17:15:47.597857615+01:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -1736,7 +1736,7 @@ entries:
   witcom-zim:
   - apiVersion: v1
     appVersion: 1.0.5
-    created: "2023-10-02T17:15:29.515882917+02:00"
+    created: "2023-11-23T17:15:47.64037476+01:00"
     dependencies:
     - alias: mariadbzimuaa
       name: mariadb
@@ -1754,7 +1754,7 @@ entries:
     version: 1.0.1
   - apiVersion: v1
     appVersion: 1.0.5
-    created: "2023-10-02T17:15:29.51381151+02:00"
+    created: "2023-11-23T17:15:47.637328657+01:00"
     dependencies:
     - alias: mariadbzimuaa
       name: mariadb
@@ -1772,7 +1772,7 @@ entries:
     version: 0.4.0
   - apiVersion: v1
     appVersion: 1.0.5
-    created: "2023-10-02T17:15:29.511098002+02:00"
+    created: "2023-11-23T17:15:47.635284355+01:00"
     dependencies:
     - alias: mariadbzimuaa
       name: mariadb
@@ -1790,7 +1790,7 @@ entries:
     version: 0.3.8
   - apiVersion: v1
     appVersion: 1.0.5
-    created: "2023-10-02T17:15:29.509136796+02:00"
+    created: "2023-11-23T17:15:47.633116652+01:00"
     dependencies:
     - alias: mariadbzimuaa
       name: mariadb
@@ -1808,7 +1808,7 @@ entries:
     version: 0.3.7
   - apiVersion: v1
     appVersion: 1.0.4
-    created: "2023-10-02T17:15:29.50715639+02:00"
+    created: "2023-11-23T17:15:47.630136649+01:00"
     dependencies:
     - alias: mariadbzimuaa
       name: mariadb
@@ -1824,4 +1824,4 @@ entries:
     urls:
     - https://witcom-gmbh.github.io/witcom-charts/witcom-zim-0.3.6.tgz
     version: 0.3.6
-generated: "2023-10-02T17:15:29.355528635+02:00"
+generated: "2023-11-23T17:15:47.465331675+01:00"
