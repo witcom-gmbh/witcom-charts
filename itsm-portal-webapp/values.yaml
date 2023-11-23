@@ -86,19 +86,20 @@ tolerations: []
 affinity: {}
 
 settings:
-  production: true
+  production: false
   language: de_DE
   keycloakConfig:
-    url: ""
-    realm: ""
-    clientId: itsm-portal-web-app
-  apiUrl: ""
-  searchUrl: ""
-  searchPrefix: cdc
-  rmdbUrl: ""
-  nocUrl: ""
-  smdbUrl: ""
-  dslRechercheUrl: ""
-  kvaListeUrl: "/assets/availability/Liste KVA.txt.json"
-  dslamListeUrl: "/assets/availability/DSLAM-Standorte.txt.json"
-  googleApiKey: ""
+    url: https://auth.example.org/auth
+    realm: example
+    clientId: example
+  apiUrl: https://api.example.org
+  searchUrl: https://api.example.org/v2/search/
+  searchPrefix: prefix
+  rmdbUrl: https://rmdb.example.org/html/navigator/detail/zone/
+  nocUrl: https://noc.example.org
+  smdbUrl: https://apis.example.org/smdb
+  dslRechercheUrl: https://apis.example.org/dslrecherche/dslabfrage_wsss.php
+  kvaListeUrl: "/assets/availability/kva.json"
+  dslamListeUrl: "/assets/availability/dslam.json"
+  googleApiKey: secret-api-key
+  networkTimeout: 5000
