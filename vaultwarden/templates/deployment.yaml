@@ -79,6 +79,9 @@ spec:
             {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      {{- if .Values.sidecars }}
+      {{- .Values.sidecars | toYaml | nindent 8 }}
+      {{- end }}
       volumes:
       - name: data
         {{- if .Values.persistence.enabled }}
